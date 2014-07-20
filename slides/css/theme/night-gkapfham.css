@@ -112,19 +112,20 @@ body {
 }
 
 .reveal .controls div.navigate-left.enabled:hover {
-    border-right-color: #f3d7ac; 
+    border-right-color: #fea927; 
 }
 
 .reveal .controls div.navigate-right.enabled:hover {
 
-    border-left-color: #f3d7ac; }
+    border-left-color: #fea927;  
+}
 
 .reveal .controls div.navigate-up.enabled:hover {
-    border-bottom-color: #f3d7ac; 
+    border-bottom-color: #fea927;  
 }
 
 .reveal .controls div.navigate-down.enabled:hover {
-    border-top-color: #f3d7ac; 
+    border-top-color: #fea927; 
 }
 
 /*********************************************
