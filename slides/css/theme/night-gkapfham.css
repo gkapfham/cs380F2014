@@ -12,9 +12,9 @@ body {
 
 .reveal {
     font-family: 'Merriweather Sans', sans;
-    font-size: 30px;
+    font-size: 35px;
     font-weight: normal;
-    /* letter-spacing: -0.02em; */
+    letter-spacing: -0.02em;
     color: #eeeeee; }
 
 ::selection {
@@ -147,3 +147,25 @@ body {
  *********************************************/
 .reveal .slide-number {
     color: #e7ad52; }
+
+.orange {
+  color:#ce5c00;
+  text-decoration: none;
+}
+
+.plum {
+  color:#ad7fa8; 
+}
+
+.green {
+ color:#8dbd0c;
+}
+
+.scarlet {
+	color:#cc0000;
+}
+
+.sky {
+	color:#3465a4;
+}
+
