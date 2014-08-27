@@ -15,9 +15,9 @@ Practicing data management professionals use a wide variety of tools to manage d
 the management of files, many people will use a version control system like Git.  In this course, we will always use the
 Git distributed version control system to manage the files associated with our laboratory assignments and the final
 project.  In this laboratory assignment, you will learn how to use the Bitbucket service for managing Git repositories
-and the {\tt git} command-line tool in the Ubuntu operating system. After connecting to the course's Git
-repository, sharing it with the course instructor, and creating your own repository, you will use a text editor to
-prepare a brief report on the features and installation procedures associate with data management tools.
+and the {\tt git} command-line tool in the Ubuntu operating system. After creating, populating, and regularly using your
+own repository and sharing it with the course instructor, you will use a text editor to prepare a brief report on both
+the features that data management tools should, and currently do, provide.
 
 \section*{Configuring Git and Bitbucket}
 
@@ -26,23 +26,23 @@ servers that will host all of our projects.  In this laboratory assignment, we w
 configure the accounts on the departmental servers and the Bitbucket service.  Throughout the assignment, you should
 refer to the following Web site for additional information:
 \url{https://confluence.atlassian.com/display/BITBUCKET/Bitbucket+101}.  As you will be required to turn in a report
-describing each step in this assignment, please be sure to keep a record of all of the steps that you complete and the
+describing each step in this assignment, please be sure to keep a record of all of the tasks that you complete and the
 challenges that you face.
 
 \begin{enumerate}
 	
-  \item If you have never done so before, you must use the {\tt ssh-keygen} program to create secure-shell keys that you
-    can use to support your communication with the Bitbucket servers.  Type {\tt man ssh-keygen} and talk with the
-    members of your team to learn more about how to use this program.  What files does {\tt ssh-keygen} produce?  Where
-    does this program store these files?
+  \item If you have never done so before, you must use the {\tt ssh-keygen} program to create secure-shell keys that
+    support your communication with the Bitbucket servers.  Type {\tt man ssh-keygen} and talk, at a high level, with
+    the members of the class to learn more about how to use this program.  What files does {\tt ssh-keygen} produce?
+    Where does this program store these files?
 
   \item If you do not already have a Bitbucket account, please go to the Bitbucket Web site and create one --- 
     make sure that you use your {\tt allegheny.edu} email address so that you can create an unlimited number of free
     Bitbucket repositories. Then, upload your ssh key to Bitbucket.
 
-    \item At this point, you can learn more about Git by consulting Web sites like \url{http://try.github.io/} and
-      \url{http://gitimmersion.com/}.  At minimum, you should ensure that you fully understand how to use the following
-      Git commands in the terminal window:
+    \item At this point, you can learn more about Git both by discussing it, at a high level, with your colleagues and
+      consulting Web sites like \url{http://try.github.io/} and \url{http://gitimmersion.com/}.  You should
+      ensure that you fully understand how to use the following Git commands:
 
       \begin{enumerate} 
         \item {\tt git init}
@@ -73,18 +73,18 @@ challenges that you face.
 
 Now that you have learned more about using Git, you should make a new repository in the {\tt cs380F2014/} directory that
 you previously created.  First, make a new directory called {\tt cs380F2014\-<your user name>}. Now, you can use the
-{\tt git init} command to turn this directory into a local Git repository.  After completion this step, you should
+{\tt git init} command to turn this directory into a local Git repository.  After completing this step, you should
 make a {\tt lab1/} directory and then create a plain-text file (e.g., a {\tt .txt}, {\tt .md}, or {\tt .tex} file) with
 a name containing the word ``features''.  For instance, if you choose to write this report in \LaTeX, then you would
 name your file {\tt features.tex}. Finally, you must create an additional plain-text file with a name including the word
-``installation''.  Again, if you decide to write this report in \LaTeX, then you could create a file called {\tt
-  installation.tex}. 
+``tools''.  Again, if you decide to write this report in \LaTeX, then you could create a file called {\tt
+  tools.tex}. 
 
 Next, you should use the Bitbucket Web site to create a repository that has the same name as the local directory and
 local repository (i.e., {\tt cs380F2014-<your user name>}).  You must follow Bitbucket's instructions to push the code
 and tags in your local repository to the remote one. When you are finished with this step, you should see in your Web
-browser that the Bitbucket servers are storing the two Java programs. Once the Git repository contains the correct
-files, you should share your Bitbucket repository with the course instructor, whose Bitbucket user name is ``gkapfham''.
+browser that the Bitbucket servers are storing the two text files. Once the Git repository contains the correct files,
+you should share your Bitbucket repository with the course instructor, whose Bitbucket user name is ``gkapfham''.
 
 % At this point, you should go into the
 % {\tt cs112s2014-share} repository and use the {\tt cp -r} command to copy the entire {\tt labs/} directory from the {\tt
@@ -93,10 +93,22 @@ files, you should share your Bitbucket repository with the course instructor, wh
 % git add} and {\tt git commit} commands in the terminal window, please learn more about them by searching on the
 % Internet, talking about them with your team, and discussing them with the course instructor.
 
-\section*{}
+\section*{Investigating Data Management Tools}
 
+Using your ``features'' file in the Git repository, please write a short one-page document that explains the features
+that you think data management tools should provide.  In advance of listing and explaining these features, your
+document should clearly define the term ``data management tool''. Whenever possible, you should rank the features in the
+order of their importance.
 
-  
+In the ``tools'' file, you should prepare a comprehensive listing of ten free and open-source tools that provide data
+management facilities.  This report should give the name of the tool, the Web site(s) and/or papers that you referenced
+to learn more about it, and a detailed description of the features that it provides.  As you explain each tool, you
+should comment on whether or not it furnishes any of the features that you mentioned in your ``features'' document.
+Whenever possible, the report should comment on the type of data that the tool aims to manage. 
+
+When writing these two documents, you must to adhere to the Honor Code statement as articulated in the syllabus.  In
+particular, you must take care to ensure that you properly cite your sources and that you use your own words to explain
+both the desired features and the ten tools. 
 
 \section*{Summary of the Required Deliverables}
 
@@ -104,39 +116,21 @@ files, you should share your Bitbucket repository with the course instructor, wh
 
   \vspace*{-.05in}
   \begin{enumerate}
-	
-    \item A description of the steps that a user must take to configure Git and Bitbucket
-
-    \item A description of the inputs, outputs, and behavior of the six aforementioned Git commands
-
-    \item A commented version of the {\tt Hooray.java} and {\tt Weeee.java} programs
-	
-    \item A one-page report that clearly responds to the following four prompts:
-  
-      \vspace*{-.05in}
-      \begin{enumerate}
-
-	\item The steps that you took to compile and run both of these programs
-
-	\item The output that each of these programs produce
-
-	\item An explanation for why these programs create the output that they do
-
-	\item A discussion of the similarities and differences between these programs and their output
-
-      \end{enumerate}
+    \setlength{\itemsep}{0pt}
+    \item A description of the steps that a user must take to configure Git and Bitbucket.
+    \item A description of the inputs, outputs, and behavior of the six aforementioned Git commands.
+    \item A complete description of the features that data management tools should provide.
+    \item A comprehensive listing of ten free and open-source data management tools.
+  \end{enumerate}
 
   \end{enumerate}
 
+\vspace*{-.1in} 
+
 Before you turn in this assignment, you also must ensure that the course instructor has read access to your Bitbucket
-repository that is named according to the convention {\tt cs112S2014-<your user name>}. Please note that each student in
-the class is responsible for completing and submitting their own version of this assignment.  However, you also will be
-assigned to work to a team that is tasked with ensuring that all of its members are able to complete each step of the
-assignment.  Team members should make themselves available to each other to answer questions and resolve any problems
-that develop during the laboratory session. While it is acceptable for members of a team to have high-level
-conversations, you should not share source code or full command lines with your team members. To ensure that you can
-communicate effectively, members of each team should sit next to each other in the room.  Please see the instructor if
-you have questions about this policy.
+repository that is named according to the convention {\tt cs380F2014-<your user name>}.  Please see the instructor if
+you have any questions about this assignment. 
+
 
 
 
