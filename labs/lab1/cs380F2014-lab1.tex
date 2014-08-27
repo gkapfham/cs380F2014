@@ -25,10 +25,9 @@ During this laboratory assignment and subsequent assignments, we will securely c
 servers that will host all of our projects.  In this laboratory assignment, we will perform all of the steps to
 configure the accounts on the departmental servers and the Bitbucket service.  Throughout the assignment, you should
 refer to the following Web site for additional information:
-\url{https://confluence.atlassian.com/display/BITBUCKET/Bitbucket+101}.  As you will be required to turn in a report 
-describing each step that you finish in this assignment, please be sure to keep a record of all of the steps that you
-complete and the challenges that you face.  You are also responsible for working with a team to ensure that
-each member of the team is able to successfully complete each of the steps outlined in this assignment.
+\url{https://confluence.atlassian.com/display/BITBUCKET/Bitbucket+101}.  As you will be required to turn in a report
+describing each step in this assignment, please be sure to keep a record of all of the steps that you complete and the
+challenges that you face.
 
 \begin{enumerate}
 	
@@ -41,19 +40,32 @@ each member of the team is able to successfully complete each of the steps outli
     make sure that you use your {\tt allegheny.edu} email address so that you can create an unlimited number of free
     Bitbucket repositories. Then, upload your ssh key to Bitbucket.
 
-  \item Now, you need to test to see if you can authenticate with the Bitbucket servers.  First, show the course
-    instructor that you have correctly configured your Bitbucket account.  Now, ask the instructor to share the course's
-    Git repository with you.  Open a terminal window on your workstation and change into the directory where you will
-    store your files for this course.  For instance, you might make a {\tt cs112S2014/} directory that will contain the
-    Git repository that I will always use to share files with you.  Once you have done so, please type the following
-    command: {\tt git clone git@bitbucket.org:gkapfham/cs112s2014-share.git}.  If everything worked correctly, you
-    should be able to download all of the files that you will need to use for this laboratory assignment. Please resolve
-    any problems that you encountered by first reviewing the Bitbucket documentation and then discussing the matter
-    with your team. If you are still not able to run the {\tt git clone} command, then please see the instructor.
+    \item At this point, you can learn more about Git by consulting Web sites like \url{http://try.github.io/} and
+      \url{http://gitimmersion.com/}.  At minimum, you should ensure that you fully understand how to use the following
+      Git commands in the terminal window:
 
-  \item Using your terminal window, you should browse the files that are in this Git repository.  In particular, please
-    look in the {\tt labs/lab1/src/} directory and use Vim to study the two Java programs that you find.  Remember, the
-    {\tt cd} command allows you to change into a directory. 
+      \begin{enumerate} 
+        \item {\tt git init}
+        \item {\tt git status}
+        \item {\tt git add} 
+        \item {\tt git commit}
+        \item {\tt git push}
+        \item {\tt git pull} 
+      \end{enumerate}
+
+  % \item Now, you need to test to see if you can authenticate with the Bitbucket servers.  First, show the course
+  %   instructor that you have correctly configured your Bitbucket account.  Now, ask the instructor to share the course's
+  %   Git repository with you.  Open a terminal window on your workstation and change into the directory where you will
+  %   store your files for this course.  For instance, you might make a {\tt cs380F2014/} directory that will contain the
+  %   Git repository that I will always use to share files with you.  Once you have done so, please type the following
+  %   command: {\tt }.  If everything worked correctly, you
+  %   should be able to download all of the files that you will need to use for this laboratory assignment. Please resolve
+  %   any problems that you encountered by first reviewing the Bitbucket documentation and then discussing the matter
+  %   with your team. If you are still not able to run the {\tt git clone} command, then please see the instructor.
+
+  % \item Using your terminal window, you should browse the files that are in this Git repository.  In particular, please
+  %   look in the {\tt labs/lab1/src/} directory and use Vim to study the two Java programs that you find.  Remember, the
+  %   {\tt cd} command allows you to change into a directory. 
 
 \end{enumerate}
 
@@ -74,25 +86,6 @@ remote one. When you are finished with this step, you should see in your Web bro
 storing the two Java programs. Once the Git repository contains the correct files, you should share your Bitbucket
 repository with the course instructor, whose my Bitbucket user name is ``gkapfham''.
 
-At this point, you can learn more about Git by consulting Web sites like \url{http://try.github.io/} and
-\url{http://gitimmersion.com/}.  At minimum, you should ensure that you fully understand how to use the following Git
-commands in the terminal window:
-
-\begin{enumerate} 
-			
-	\item {\tt git init}
-
-	\item {\tt git status}
-
-	\item {\tt git add} 
-
-	\item {\tt git commit}
-
-	\item {\tt git push}
-
-	\item {\tt git pull} 
-
-\end{enumerate}
 
 \section*{Compiling, Running, and Understanding Java Programs}
 
