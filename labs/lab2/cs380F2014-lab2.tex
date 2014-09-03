@@ -84,28 +84,34 @@ many attributes are in the data set? How many rows are in the data set? While yo
 answer these questions, you can check your responses by visiting the ``Algae Data Set Description'' in the UCI Machine
 Learning Repository and the ``Predicting Algae Blooms'' chapter in Torgo's book. 
 
-The a1 attribute gives the frequency number of a harmful algae known as "a1" in the data set. Please note that the data
-set does not contain any information about the name or the characteristics of this type of alga. Each value in the a1
-attribute corresponds to a frequency for this algae being found in the specified environment. In this case, small values
-are better since they indicate the presence of less of this harmful algae. Using the mean and the median values of the
-frequencies for alga a1, is this algae more likely to bloom in small, medium, or large rivers?
+As you learn more about this data set, you will notice that the {\tt a1} attribute gives the frequency number of a
+harmful algae known as ``a1'' in the data set. Please note that the data set does not contain any information about the
+name or the characteristics of this type of alga. Each value in the {\tt a1} attribute corresponds to a ``frequency''
+that this algae was found in the specified environment; in this case, small values are better since they indicate the
+presence of less of this harmful algae. Using the mean and the median values of the frequencies for alga {\tt a1}, is
+this algae more likely to bloom in rivers classified as ``small'', ``medium'', or ``large''?
 
-The a2 and a3 attributes respectively give the frequency number of a harmful algae known as "a2" and "a3" in the data
-set. Using the mean and the median values of the frequencies for algae a2 and a3, are these algae more likely to bloom
-in small, medium, or large rivers?
+The {\tt a2} and {\tt a3} attributes respectively give the frequency number of a harmful algae known as ``a2'' and
+``a3'' in the data set. Using the mean and the median values of the frequencies for algae {\tt a2} and {\tt a3}, are
+these algae more likely to bloom in ``small'', ``medium'', or ``large'' rivers?
 
-The algae data set also contains information about the speed of the rivers, as stored in the speed attribute. Using the
-mean and the median values for the a1, a2, and a3 algae, are these algae more likely to bloom in rivers with a low,
-medium, or high speed?
+Additionally, the {\tt algae} data set also contains details about the speed of the rivers, as stored in the {\tt speed}
+attribute. Using the mean and the median values for the ``a1'', ``a2'', and ``a3'' algae, are these algae more
+likely to bloom in rivers with a ``low'', ``medium'', or ``high'' speed?
 
-The Cl attribute in the algae data set describes the mean amount of chlorophyll in the rivers. What is the relationship
-between the mean value of chlorophyll and the amount of the a1, a2, and a3 algae on the rivers? For instance, if a river
-has a high amount of chlorophyll, does this mean that it will contain a high or a low amount of each algae?
+The {\tt Cl} attribute in the {\tt algae} data set describes the mean amount of chlorophyll in the rivers. What is the
+relationship between the mean value of chlorophyll and the amount of ``a1'', ``a2'', and ``a3'' in the rivers?
+For instance, if a river has a ``high'' amount of chlorophyll, does this mean that it will contain a ``high'' or a
+``low'' amount of each algae? Why do you think this is the case?
 
 There are many other interesting trends evident in the algae data set. Using any combination of R commands, please
-identify and try to explain one additional trend. If you are interested, you may also want to explore the visualization
-of a trend by using the Lattice package that is available by typing library(lattice) at the R prompt. For extra credit,
-you may turn in visualizations, in addition to your code segments, for all of the previous questions.
+identify and try to explain one additional trend. As you are completing this last part of the laboratory assignment, it
+may be helpful to visualize the {\tt algae} data set so that you can easily and quickly spot new and interesting
+phenomena. To create a wide variety of different graphs, you can explore the use of the ``Lattice'' package that is
+available after you type the {\tt library(lattice)} command. You can learn more about Lattice by visiting the package's
+Web site that is available at \url{http://lmdvr.r-forge.r-project.org/}. Once you have learned how to use Lattice to
+produce simple data visualizations in R, you should construct at least one graph to accompany your response to one of
+the previously stated questions.
 
 % At this point, you should go into the
 % {\tt cs112s2014-share} repository and use the {\tt cp -r} command to copy the entire {\tt labs/} directory from the {\tt
@@ -121,17 +127,24 @@ you may turn in visualizations, in addition to your code segments, for all of th
   \vspace*{-.05in}
   \begin{enumerate}
     \setlength{\itemsep}{0pt}
-    \item A description of the steps that a user must take to configure Git and Bitbucket.
-    \item A description of the inputs, outputs, and behavior of the six aforementioned Git commands.
-    \item A complete description of the features that data management tools should provide.
-    \item A comprehensive listing of ten free and open-source data management tools.
+    \item A screenshot showing a small selection of the output seen when installing ``{\tt DMwR}''.
+    \item The description of the input, output, and behavior for the required R commands.
+    \item Answers to all of the questions posed, with supporting output and evidence as appropriate. 
+    \item At least one supporting visualization of some trend that you found in the data set. 
+    \item A commentary on the challenges that you faces and the way that you overcame them.
   \end{enumerate}
 
 \vspace*{-.1in} 
 
-Before you turn in this assignment, you also must ensure that the course instructor has read access to your Bitbucket
-repository that is named according to the convention {\tt cs380F2014-<your user name>}.  Please see the instructor if
-you have any questions about this assignment. 
+In adherence to the Honor Code, students should complete this assignment on an individual basis. While it is appropriate
+for students in this class to have high-level conversations about the assignment, it is necessary to distinguish
+carefully between the student who discusses the principles underlying a problem with others and the student who produces
+assignments that are identical to, or merely variations on, someone else's work.  Deliverables that are nearly identical
+to the work of others will be taken as evidence of violating Allegheny College's \mbox{Honor Code}.
+
+% Before you turn in this assignment, you also must ensure that the course instructor has read access to your Bitbucket
+% repository that is named according to the convention {\tt cs380F2014-<your user name>}.  Please see the instructor if
+% you have any questions about this assignment. 
 
 
 
