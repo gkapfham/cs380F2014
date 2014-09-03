@@ -20,40 +20,44 @@ sets using functions such as the mean and median. Once you have a better underst
 the use of imperative programming techniques during data analysis and management, you will also investigate the steps
 needed to produce visualizations of a file-based data set.
 
-\section*{Configuring Git and Bitbucket}
+\section*{Installing and Configuring the Data Sets}
 
-During this laboratory assignment and subsequent assignments, we will securely communicate with the Bitbucket.org
-servers that will host all of our projects.  In this laboratory assignment, we will perform all of the steps to
-configure the accounts on the departmental servers and the Bitbucket service.  Throughout the assignment, you should
-refer to the following Web site for additional information:
-\url{https://confluence.atlassian.com/display/BITBUCKET/Bitbucket+101}.  As you will be required to turn in a report
-describing each step in this assignment, please be sure to keep a record of all of the tasks that you complete and the
-challenges that you face.
+During the completion of this laboratory assignment, we will rely upon some of the tools and data sets provided by Luis
+Torgo's book entitled ``Data Mining with R: Learning with Case Studies''. A copy of the book will be available for your
+consultation throughout the laboratory session and then held on reserve in my outer office. You can also learn more
+about this book by visiting the following Web site: \url{http://www.dcc.fc.up.pt/~ltorgo/DataMiningWithR/}.
 
-\begin{enumerate}
-	
-  \item If you have never done so before, you must use the {\tt ssh-keygen} program to create secure-shell keys that
-    support your communication with the Bitbucket servers.  Type {\tt man ssh-keygen} and talk, at a high level, with
-    the members of the class to learn more about how to use this program.  What files does {\tt ssh-keygen} produce?
-    Where does this program store these files?
+As previously mentioned, this assignment invites you to implement procedural (or, imperative) methods---in the R
+language for statistical computation---for answering questions about a real-world data set.  To start this laboratory
+assignment, you should enter into the command-line-based and interactive environment of the R language. You can do this
+by typing ``{\tt R}'' into your terminal window. After making sure that you already have a Web browser open, you should
+next type the command ``{\tt help.start()}'' in order to load the help system for R. You can use this Web-based help
+environment throughout the laboratory session as you learn new commands for imperative data management. In addition, you
+can learn more about R by visiting Web sites such as \url{http://www.statmethods.net/} and
+\url{http://www.cyclismo.org/tutorial/R/}.
 
-  \item If you do not already have a Bitbucket account, please go to the Bitbucket Web site and create one --- 
-    make sure that you use your {\tt allegheny.edu} email address so that you can create an unlimited number of free
-    Bitbucket repositories. Then, upload your ssh key to Bitbucket.
+We need to install the software package for the Data Mining with R book. Since this process takes a very long time, you
+should type the following command in your R shell right away: install.packages("DMwR"). Once you have pressed enter, you
+will see that many lines scroll in your terminal window as R performs a network install of all the required packages.
+When this process finishes, you can load the library by typing library(DMwR). You should also repeat the following steps
+for the Hmisc package.
 
-    \item At this point, you can learn more about Git both by discussing it, at a high level, with your colleagues and
-      consulting Web sites like \url{http://try.github.io/} and \url{http://gitimmersion.com/}.  You should
-      ensure that you fully understand how to use the following Git commands:
+In order to effectively use R to analyze a file of data, you need to learn several basic commands. You can view the
+manual for a specific command, for instance subset, by typing ?subset at the R shell's prompt. In this phase of the
+assignment, you should learn how to use several R commands and write a short description of their input, output, and
+behavior, including one concrete example of the command in action with the data set discussed at a later stage of the
+assignment. Please study the following commands:
 
-      \begin{enumerate} 
-        \item {\tt git init}
-        \item {\tt git status}
-        \item {\tt git add} 
-        \item {\tt git commit}
-        \item {\tt git push}
-        \item {\tt git pull} 
-      \end{enumerate}
+attach
+names
+head
+mean
+median
+subset
+ls
+summarize or summary
 
+  
   % \item Now, you need to test to see if you can authenticate with the Bitbucket servers.  First, show the course
   %   instructor that you have correctly configured your Bitbucket account.  Now, ask the instructor to share the course's
   %   Git repository with you.  Open a terminal window on your workstation and change into the directory where you will
@@ -67,8 +71,6 @@ challenges that you face.
   % \item Using your terminal window, you should browse the files that are in this Git repository.  In particular, please
   %   look in the {\tt labs/lab1/src/} directory and use Vim to study the two Java programs that you find.  Remember, the
   %   {\tt cd} command allows you to change into a directory. 
-
-\end{enumerate}
 
 \section*{Creating and Populating a New Git Repository}
 
