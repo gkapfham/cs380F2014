@@ -36,26 +36,32 @@ environment throughout the laboratory session as you learn new commands for impe
 can learn more about R by visiting Web sites such as \url{http://www.statmethods.net/} and
 \url{http://www.cyclismo.org/tutorial/R/}.
 
-We need to install the software package for the Data Mining with R book. Since this process takes a very long time, you
-should type the following command in your R shell right away: install.packages("DMwR"). Once you have pressed enter, you
-will see that many lines scroll in your terminal window as R performs a network install of all the required packages.
-When this process finishes, you can load the library by typing library(DMwR). You should also repeat the following steps
-for the Hmisc package.
+To access the data files needed for this assignment, we must install the software package for the companion textbook.
+Since this process may takes a long time, you should type the following command in your R shell right away: ``{\tt
+  install.packages("DMwR")}''. Once you have pressed enter, you will see that many lines scroll in your terminal window
+as R performs a network install of all the required packages, including the required data files.  When this process
+finishes, you can load the library by typing ``{\tt library(DMwR)}''. You should also repeat these steps for the
+``{\tt Hmisc}'' package.
 
-In order to effectively use R to analyze a file of data, you need to learn several basic commands. You can view the
-manual for a specific command, for instance subset, by typing ?subset at the R shell's prompt. In this phase of the
+In order to effectively use R to analyze the data in a file, you need to learn several basic commands. You can view the
+manual for a specific command, say {\tt subset}, by typing ``{\tt ?subset}'' at the R prompt. In this phase of the
 assignment, you should learn how to use several R commands and write a short description of their input, output, and
 behavior, including one concrete example of the command in action with the data set discussed at a later stage of the
-assignment. Please study the following commands:
+assignment. Please see the course instructor if you have a question about how to use a data manipulation command in R.
+In particular, you must study, at minimum, the following commands:
 
-attach
-names
-head
-mean
-median
-subset
-ls
-summarize or summary
+\begin{itemize}
+    \itemsep0pt
+  \item {\tt attach}
+  \item {\tt names}
+  \item {\tt head}
+  \item {\tt mean}
+  \item {\tt median}
+  \item {\tt subset}
+  \item {\tt ls}
+  \item {\tt summarize} or {\tt summary}
+\end{itemize}
+
 
   
   % \item Now, you need to test to see if you can authenticate with the Bitbucket servers.  First, show the course
