@@ -109,6 +109,57 @@ if( window.location.search.match( /print-pdf/gi ) ) {
                 <br /><small><a href="http://creativecommons.org/licenses/by-sa/2.0/">creative commons licensed ( BY-SA )</a> <a title="Keys" href="http://flickr.com/photos/120600995@N07/14028600474">flickr photo</a> shared by <a href="http://flickr.com/people/120600995@N07">jacqui.brown33</a></small>
             </section>
 
+            <section>
+                <h1 id="let's_try_it!">Let's Try It!</h1>
+                <p class="fragment">Create a relational schema</p>
+                <p class="fragment">INSERT data into the database</p>
+                <p class="fragment">Try to violate the constraints of the schema</p>
+                <p class="fragment">What did your experiments reveal?</p>
+            </section>
+
+
+                <section>
+                    <h1 id="java_programs">Java Programs</h1>
+                    <pre><code data-trim>
+   CREATE TABLE Writers (
+       id                INTEGER NOT NULL PRIMARY KEY,
+       first_name        VARCHAR(15) NOT NULL,
+       middle_name       VARCHAR(15),
+       last_name         VARCHAR(15) NOT NULL,
+       birth_date        VARCHAR(10) NOT NULL,
+       death_date        VARCHAR(10),
+       country_of_origin VARCHAR(20) NOT NULL
+);
+                    </code>
+                    </pre>
+                    <p class="fragment">Run the <code>sqlite3</code> command and create this schema</p>
+                    <p class="fragment">What output does the <code><b class="orange">.tables</b></code> command produce?</p>
+                    <p class="fragment">What output does the <code><b class="orange">.schema</b></code> command produce?</p>
+                </section>
+
+                <section>
+                    <h1 id="java_programs">Java Programs</h1>
+                    <pre><code data-trim>
+   CREATE TABLE Writers (
+       id                INTEGER NOT NULL PRIMARY KEY,
+       first_name        VARCHAR(15) NOT NULL,
+       middle_name       VARCHAR(15),
+       last_name         VARCHAR(15) NOT NULL,
+       birth_date        VARCHAR(10) NOT NULL,
+       death_date        VARCHAR(10),
+       country_of_origin VARCHAR(20) NOT NULL
+);
+                    </code>
+                    </pre>
+                    <p class="fragment">Run this command: <code><b class="sky">INSERT into Writers VALUES(1, 'Ezra', 'Weston Loomis', 'Pound', '30/10/1885', '1/11/1972', 'United States of America');</b></code></p>
+                </section>
+
+                <section>
+                    <h1 id="try_to_find">Try to Find</h1>
+                    <p class="fragment">Data that violates the primary key constraint</p>
+                    <p class="fragment">Data that adheres to the primary key constraint</p>
+                    <p class="fragment">Try multiple <code>INSERT</code> statements!</p>
+                </section>
 
         </div>
 
