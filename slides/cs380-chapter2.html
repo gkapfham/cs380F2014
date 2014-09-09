@@ -28,13 +28,13 @@
 
         <!-- If the query includes 'print-pdf', include the PDF print sheet -->
         <script>
-if( window.location.search.match( /print-pdf/gi ) ) {
-    var link = document.createElement( 'link' );
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    link.href = 'css/print/pdf.css';
-    document.getElementsByTagName( 'head' )[0].appendChild( link );
-}
+            if( window.location.search.match( /print-pdf/gi ) ) {
+                var link = document.createElement( 'link' );
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = 'css/print/pdf.css';
+                document.getElementsByTagName( 'head' )[0].appendChild( link );
+            }
         </script>
 
         <!--[if lt IE 9]>
@@ -48,78 +48,77 @@ if( window.location.search.match( /print-pdf/gi ) ) {
         <div class="reveal">
             <div class="slides">
 
-            <section data-background-transition="none" data-background="https://farm4.staticflickr.com/3094/2428544365_4fdd69c25d_b.jpg" style="background: rgba(29,31,33,0.9)">
-                <h1>Computer Science 380:</h1>
-                <h3>Principles of Database Systems</h3>
-                <h3>Chapter 2</h3>
-                <p>Gregory M. Kapfhammer</p>
-                <br/><small><a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">creative commons licensed ( BY-NC-SA )</a> <a title="vases" href="http://flickr.com/photos/mybloodyself/2428544365">flickr photo</a> shared by <a href="http://flickr.com/people/mybloodyself">danmachold</a></small>
-            </section>
-
-            <section>
-                <h1 id="relational_databases">Relational Databases</h1>
-                <p class="fragment">Collection of tables, each with a unique name</p>
-                <p class="fragment">Review the examples in Figures 2.1 through 2.4</p>
-                <p class="fragment">What observations can you make about these tables?</p>
-                <p class="fragment"><b class="plum">Why do scientists uses relational databases?</b></p>
-            </section>
-
-            <section data-background-transition="none" data-background="https://farm4.staticflickr.com/3115/2901295347_47caf4600f_b.jpg" style="">
-            </section>
-
-            <section data-background-transition="none" data-background="https://farm4.staticflickr.com/3115/2901295347_47caf4600f_b.jpg" style="background: rgba(29,31,33,0.9)">
-                <h1>Standardized Terms</h1>
-                <p class="fragment">These words have the <b class="orange">same</b> meaning!</p>
-                <p class="fragment">Relation and table</p>
-                <p class="fragment">Tuple and row</p>
-                <p class="fragment">Attribute and column</p>
-                <br/> <small><a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">creative commons licensed (
-                        BY-NC-SA )</a> <a title="" href="http://flickr.com/photos/42498009@N00/2901295347">flickr
-                        photo</a> shared by <a href="http://flickr.com/people/42498009@N00">M.Y</a></small>
-            </section>
-
-            <section>
-                <h1 id="finding_data">Accessing Data</h1>
-                <p class="fragment">How can we distinguish one tuple from another?</p>
-                <p class="fragment">Can the <b class="plum">values</b> of an attribute uniquely identify a tuple?</p>
-                <p class="fragment">We will identify <b class="green">keys</b> for our database tables!</p>
-            </section>
-
-            <section data-background-transition="none" data-background="http://farm8.static.flickr.com/7061/14028600474_83724ec162.jpg" style="">
-            </section>
-
-            <section data-background-transition="none" data-background="http://farm8.static.flickr.com/7061/14028600474_83724ec162.jpg" style="background: rgba(29,31,33,0.9)">
-                <h1>Database Keys</h1>
-                <p class="fragment">What is a <b class="sky">superkey</b>?</p>
-                <p class="fragment">Is this an example of a superkey?</p>
-                <p class="fragment"><b class="green">Wait</b>! A superkey may have extraneous attributes!</p>
-                <p class="fragment">Why is this an important issue to consider?</p>
-                <p class="fragment">We need to identify a <b class="scarlet">minimal</b> superkey!</p>
-                <br /><small><a href="http://creativecommons.org/licenses/by-sa/2.0/">creative commons licensed ( BY-SA )</a> <a title="Keys" href="http://flickr.com/photos/120600995@N07/14028600474">flickr photo</a> shared by <a href="http://flickr.com/people/120600995@N07">jacqui.brown33</a></small>
-            </section>
-
-            <section data-background-transition="none" data-background="http://farm8.static.flickr.com/7061/14028600474_83724ec162.jpg" style="background: rgba(29,31,33,0.9)">
-                <h1>Database Keys</h1>
-                <p class="fragment">What is a <b class="scarlet">candidate</b> key?</p>
-                <p class="fragment">But, many candidate keys are possible!</p>
-                <p class="fragment">So, we have to pick one of them.</p>
-                <p class="fragment">What is a <b class="plum">primary</b> key?</p>
-                <p class="fragment">Often, primary keys are never, or rarely modified. Why?</p>
-                <p class="fragment">Good and bad examples of primary keys.</p>
-                <br /><small><a href="http://creativecommons.org/licenses/by-sa/2.0/">creative commons licensed ( BY-SA )</a> <a title="Keys" href="http://flickr.com/photos/120600995@N07/14028600474">flickr photo</a> shared by <a href="http://flickr.com/people/120600995@N07">jacqui.brown33</a></small>
-            </section>
-
-            <section>
-                <h1 id="let's_try_it!">Let's Try It!</h1>
-                <p class="fragment">Create a relational schema</p>
-                <p class="fragment">INSERT data into the database</p>
-                <p class="fragment">Try to violate the constraints of the schema</p>
-                <p class="fragment">What did your experiments reveal?</p>
-            </section>
-
+                <section data-background-transition="none" data-background="https://farm4.staticflickr.com/3094/2428544365_4fdd69c25d_b.jpg" style="background: rgba(29,31,33,0.9)">
+                    <h1>Computer Science 380:</h1>
+                    <h3>Principles of Database Systems</h3>
+                    <h3>Chapter 2</h3>
+                    <p>Gregory M. Kapfhammer</p>
+                    <br/><small><a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">creative commons licensed ( BY-NC-SA )</a> <a title="vases" href="http://flickr.com/photos/mybloodyself/2428544365">flickr photo</a> shared by <a href="http://flickr.com/people/mybloodyself">danmachold</a></small>
+                </section>
 
                 <section>
-                    <h1 id="java_programs">Java Programs</h1>
+                    <h1 id="relational_databases">Relational Databases</h1>
+                    <p class="fragment">Collection of tables, each with a unique name</p>
+                    <p class="fragment">Review the examples in Figures 2.1 through 2.4</p>
+                    <p class="fragment">What observations can you make about these tables?</p>
+                    <p class="fragment"><b class="plum">Why do scientists uses relational databases?</b></p>
+                </section>
+
+                <section data-background-transition="none" data-background="https://farm4.staticflickr.com/3115/2901295347_47caf4600f_b.jpg" style="">
+                </section>
+
+                <section data-background-transition="none" data-background="https://farm4.staticflickr.com/3115/2901295347_47caf4600f_b.jpg" style="background: rgba(29,31,33,0.9)">
+                    <h1>Standardized Terms</h1>
+                    <p class="fragment">These words have the <b class="orange">same</b> meaning!</p>
+                    <p class="fragment">Relation and table</p>
+                    <p class="fragment">Tuple and row</p>
+                    <p class="fragment">Attribute and column</p>
+                    <br/> <small><a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">creative commons licensed (
+                            BY-NC-SA )</a> <a title="" href="http://flickr.com/photos/42498009@N00/2901295347">flickr
+                            photo</a> shared by <a href="http://flickr.com/people/42498009@N00">M.Y</a></small>
+                </section>
+
+                <section>
+                    <h1 id="finding_data">Accessing Data</h1>
+                    <p class="fragment">How can we distinguish one tuple from another?</p>
+                    <p class="fragment">Can the <b class="plum">values</b> of an attribute uniquely identify a tuple?</p>
+                    <p class="fragment">We will identify <b class="green">keys</b> for our database tables!</p>
+                </section>
+
+                <section data-background-transition="none" data-background="http://farm8.static.flickr.com/7061/14028600474_83724ec162.jpg" style="">
+                </section>
+
+                <section data-background-transition="none" data-background="http://farm8.static.flickr.com/7061/14028600474_83724ec162.jpg" style="background: rgba(29,31,33,0.9)">
+                    <h1>Database Keys</h1>
+                    <p class="fragment">What is a <b class="sky">superkey</b>?</p>
+                    <p class="fragment">Is this an example of a superkey?</p>
+                    <p class="fragment"><b class="green">Wait</b>! A superkey may have extraneous attributes!</p>
+                    <p class="fragment">Why is this an important issue to consider?</p>
+                    <p class="fragment">We need to identify a <b class="scarlet">minimal</b> superkey!</p>
+                    <br /><small><a href="http://creativecommons.org/licenses/by-sa/2.0/">creative commons licensed ( BY-SA )</a> <a title="Keys" href="http://flickr.com/photos/120600995@N07/14028600474">flickr photo</a> shared by <a href="http://flickr.com/people/120600995@N07">jacqui.brown33</a></small>
+                </section>
+
+                <section data-background-transition="none" data-background="http://farm8.static.flickr.com/7061/14028600474_83724ec162.jpg" style="background: rgba(29,31,33,0.9)">
+                    <h1>Database Keys</h1>
+                    <p class="fragment">What is a <b class="scarlet">candidate</b> key?</p>
+                    <p class="fragment">But, many candidate keys are possible!</p>
+                    <p class="fragment">So, we have to pick one of them.</p>
+                    <p class="fragment">What is a <b class="plum">primary</b> key?</p>
+                    <p class="fragment">Often, primary keys are never, or rarely modified. Why?</p>
+                    <p class="fragment">Good and bad examples of primary keys.</p>
+                    <br /><small><a href="http://creativecommons.org/licenses/by-sa/2.0/">creative commons licensed ( BY-SA )</a> <a title="Keys" href="http://flickr.com/photos/120600995@N07/14028600474">flickr photo</a> shared by <a href="http://flickr.com/people/120600995@N07">jacqui.brown33</a></small>
+                </section>
+
+                <section>
+                    <h1 id="let's_try_it!">Let's Try It!</h1>
+                    <p class="fragment">Create a relational schema</p>
+                    <p class="fragment">INSERT data into the database</p>
+                    <p class="fragment">Try to violate the constraints of the schema</p>
+                    <p class="fragment">What did your experiments reveal?</p>
+                </section>
+
+                <section>
+                    <h1 id="sql_code">SQL Code</h1>
                     <pre><code data-trim>
    CREATE TABLE Writers (
        id                INTEGER NOT NULL PRIMARY KEY,
@@ -138,7 +137,7 @@ if( window.location.search.match( /print-pdf/gi ) ) {
                 </section>
 
                 <section>
-                    <h1 id="java_programs">Java Programs</h1>
+                    <h1 id="sql_code">SQL Code</h1>
                     <pre><code data-trim>
    CREATE TABLE Writers (
        id                INTEGER NOT NULL PRIMARY KEY,
@@ -158,38 +157,39 @@ if( window.location.search.match( /print-pdf/gi ) ) {
                     <h1 id="try_to_find">Further Explorations</h1>
                     <p class="fragment">Data that <b class="green">violates</b> the primary key constraint</p>
                     <p class="fragment">Data that <b class="plum">adheres</b> to the primary key constraint</p>
-                    <p class="fragment">Try multiple <code>INSERT</code> statements!</p>
+                    <p class="fragment">Try multiple <code>INSERT</code> statements</p>
+                    <p class="fragment">Try to run <code>UPDATE</code> and <code>DELETE</code> statements</p>
                     <p class="fragment">What have you learned about relational databases?</p>
                     <p class="fragment">Do you have any questions about using <code>sqlite3</code>?</p>
                 </section>
 
-            <section data-background-transition="none" data-background="http://farm8.static.flickr.com/7061/14028600474_83724ec162.jpg" style="background: rgba(29,31,33,0.9)">
-                <h1>Database Keys</h1>
-                <p class="fragment">What is a <b class="scarlet">foreign</b> key?</p>
-                <p class="fragment">Creating a referencing relationship in the tables</p>
-                <p class="fragment">Using both primary keys and foreign keys</p>
-                <p class="fragment">Why is it useful to define the schema this way?</p>
-                <p class="fragment">Any questions about key definition in relational schemas?</p>
-                <br /><small><a href="http://creativecommons.org/licenses/by-sa/2.0/">creative commons licensed ( BY-SA )</a> <a title="Keys" href="http://flickr.com/photos/120600995@N07/14028600474">flickr photo</a> shared by <a href="http://flickr.com/people/120600995@N07">jacqui.brown33</a></small>
-            </section>
+                <section data-background-transition="none" data-background="http://farm8.static.flickr.com/7061/14028600474_83724ec162.jpg" style="background: rgba(29,31,33,0.9)">
+                    <h1>Database Keys</h1>
+                    <p class="fragment">What is a <b class="scarlet">foreign</b> key?</p>
+                    <p class="fragment">Creating a referencing relationship in the tables</p>
+                    <p class="fragment">Using both primary keys and foreign keys</p>
+                    <p class="fragment">Why is it useful to define the schema this way?</p>
+                    <p class="fragment">Any questions about key definition in relational schemas?</p>
+                    <br /><small><a href="http://creativecommons.org/licenses/by-sa/2.0/">creative commons licensed ( BY-SA )</a> <a title="Keys" href="http://flickr.com/photos/120600995@N07/14028600474">flickr photo</a> shared by <a href="http://flickr.com/people/120600995@N07">jacqui.brown33</a></small>
+                </section>
 
-        </div>
+            </div>
 
-        <script src="lib/js/head.min.js"></script>
-        <script src="js/reveal.min.js"></script>
+            <script src="lib/js/head.min.js"></script>
+            <script src="js/reveal.min.js"></script>
 
-        <script>
+            <script>
 
-// Full list of configuration options available here:
-// https://github.com/hakimel/reveal.js#configuration
-        Reveal.initialize({
-        controls: true,
-        progress: true,
-        history: true,
-        center: true,
+                // Full list of configuration options available here:
+                // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+controls: true,
+progress: true,
+history: true,
+center: true,
 
-        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-        transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/none/none
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/none/none
 
 // Parallax scrolling
 // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
@@ -197,16 +197,16 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 
 // Optional libraries used to extend on reveal.js
 dependencies: [
-        { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-        { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-        { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-        { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-        { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-        { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-        ]
-});
+{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+            ]
+            });
 
-        </script>
+            </script>
 
-    </body>
-</html>
+        </body>
+    </html>
