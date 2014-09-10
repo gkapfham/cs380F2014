@@ -48,6 +48,8 @@ the resources for this laboratory assignment.
 \end{sloppypar}
 
 \section*{Experimental Performance Evaluation of Declarative Querying}
+\vspace*{-.2in}
+
 
 The existence of JoSQL makes it possible to frame and answer many interesting questions about the performance associated
 with using a variant of the structured query language in an object-oriented program.  For instance, would the
@@ -73,39 +75,53 @@ trends and explain why these trends are evident in your data set.  Whenever poss
 practical implications of your results for software developers who may use JoSQL.  
 
 You are responsible for working in a team to coordinate the experiments that you conduct.  In particular, you should
-make sure that each member of the team implements different benchmarks and then conducts experiments in a uniform
-manner.  After the members of the team have individually completed the experiments and recorded and analyzed their
-results, you should meet together to discuss the trends that you found in the data sets.  While students are responsible
-for writing their own reports that focus on their own data sets and analyses, they should work together in a team to
-prepare a single presentation for the laboratory session on which this assignment is due.  After explaining the purpose
-and configuration of your experimental study, the presentation should highlight the similarities and differences in the
-results developed by each team member.  Finally, you should draw some conclusions about which algorithmic approach
-and/or data management technique is the fastest.  Please note that each team member is responsible for independently
-conducting their own experiments, writing their own report, and adequately participating in the completion of the slides
-and the final presentation.  </p>
+make sure that each member of the team implements a different benchmarks and then, as a team, you conduct experiments in
+a uniform manner.  After the members of the team have individually completed their assigned experiments and recorded
+results, you should meet together to merge your data sets and discuss the trends that you found in them.  Additionally,
+your team should prepare a single laboratory report, following the requirements outlined in the previous paragraph.
+Moreover, your team should prepare a short five minute presentation that highlights your work through no more than five
+slides focusing on the benchmarking framework, the design of the experiments, and the empirical results. (Each team will
+  give their presentation during the laboratory session in which this assignment is due). Ultimately, you report and
+your presentation should draw conclusions about which data management technique is the fastest.
 
+Students who would like to learn more about JoSQL should visit the project's Web site at:
+\url{http://josql.sourceforge.net/}. Additionally, students who would like to learn more about conducting the type of
+empirical study required by this laboratory assignment are encouraged to read the paper ``Ask and You Shall Receive:\
+Empirically Evaluating Declarative Approaches to Finding Data in Unstructured Heaps'' by William F.\ Jones and Gregory
+M.\ Kapfhammer.
+
+Since this is a two week assignment, the students in each team should carefully manage their time through Google
+Calendar and team, ensuring that everyone can make a strong contribution to the project. Teams that experience project
+management issues should see the instructor immediately.
 
 \section*{Summary of the Required Deliverables}
 
-  This assignment invites you to submit one printed version of the following deliverables:
+You and your team should always use your Git repository, hosted by Bitbucket, to store the source code of your
+benchmarking framework, all of the CSV data files, the final report, and the presentation slides. The repository must be
+shared with the course instructor and the version control log should accurately reflect each student's contribution to
+this assignment. In addition, this assignment invites your team to submit one printed version of the following
+deliverables:
 
-  \vspace*{-.05in}
-  \begin{enumerate}
+\vspace*{-.05in}
+\begin{enumerate}
     \setlength{\itemsep}{0pt}
-    \item A screenshot showing a small selection of the output seen when installing ``{\tt DMwR}''.
-    \item The description of the input, output, and behavior for the required R commands.
-    \item Answers to all of the questions posed, with supporting output and evidence as appropriate. 
-    \item At least one supporting visualization of some trend that you found in the data set. 
-    \item A commentary on the challenges that you faced and the way(s) that you overcame them.
-  \end{enumerate}
+  \item A one to three paragraph commentary on the work that each team member completed. 
+  \item A full-featured description of the key features provided by the JoSQL library.
+  \item The output from each team member's use of the {\tt FileFinder.java} program.
+  \item The properly formatted and documented version of the source code for your benchmarks.
+  \item The CSV data files resulting from all of the runs of your benchmarks.
+  \item A comprehensive report describing your benchmarks, the evaluation metrics, and the results.
+    \item The presentation slides to support your team's five minute presentation.
+\end{enumerate}
 
 \vspace*{-.1in} 
 
-In adherence to the Honor Code, students should complete this assignment on an individual basis. While it is appropriate
-for students in this class to have high-level conversations about the assignment, it is necessary to distinguish
-carefully between the student who discusses the principles underlying a problem with others and the student who produces
-assignments that are identical to, or merely variations on, someone else's work.  Deliverables that are nearly identical
-to the work of others will be taken as evidence of violating Allegheny College's \mbox{Honor Code}.
+In adherence to the Honor Code, students should complete this assignment while exclusively collaborating with the
+members of their team. While it is appropriate for students in this class---who are not in the same team---to have
+high-level conversations about the assignment, it is necessary to distinguish carefully between the team that discusses
+the principles underlying a problem with another team and the team that produces an assignment that is identical to, or
+merely a variation on, the work of another team.  Deliverables that are nearly identical to the work of others will be
+taken as evidence of violating Allegheny College's \mbox{Honor Code}.
 
 % Before you turn in this assignment, you also must ensure that the course instructor has read access to your Bitbucket
 % repository that is named according to the convention {\tt cs380F2014-<your user name>}.  Please see the instructor if
