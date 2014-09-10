@@ -42,10 +42,47 @@ the resources for this laboratory assignment.
   modifying the file matching pattern some something instead of {\tt LIKE `\%ja\%'}. Next, you should set your {\tt
     CLASSPATH} environment variable to include both the current working directory and the two Java archives in the {\tt lib/}
   directory. Before you move on to the next phase of this assignment, please make sure that every member of your team is
-  able to compile and run the {\tt FileFinder.java} program. In addition, every member of your team should be explain to
+  able to compile and run the {\tt FileFinder.java} program. In addition, every member of your team should be able to
   explain why this program works the way that it does.
 
 \end{sloppypar}
+
+\section*{Experimental Performance Evaluation of Declarative Querying}
+
+The existence of JoSQL makes it possible to frame and answer many interesting questions about the performance associated
+with using a variant of the structured query language in an object-oriented program.  For instance, would the
+performance of {\tt FileFinder} vary if, to store Java objects, you used a {\tt LinkedList} or a {\tt Vector} instead of
+an {\tt ArrayList}?  JoSQL includes many different types of SQL statements---what is the performance of different
+querying constructs?  Moreover, it would also be interesting to compare the performance of JoSQL to a hand-coded
+alternative that uses iteration constructs to directly search a data structure for matching objects.
+
+As the final part of this laboratory assignment, you are responsible for implementing a simple benchmarking framework
+for JoSQL.  Your framework should contain, at minimum, five benchmarks that can be run in different configurations.  You
+should design your benchmarks so that they will enable you to answer specific questions about the performance trade-offs
+associated with using the structured query language for Java objects.  After completing the implementation of your
+benchmarks, you should run them to collect performance results concerning time and, if possible, space overheads.
+Please execute the benchmarks multiple times and record the results in a structured fashion; each team should
+consider storing their data in comma-separated value (CSV) files.
+
+In order to analyze the results, you should construct data tables and visualizations.  For instance, you may want to
+write programs in the R language for statistical computation.  After developing an understanding of the fundamental
+trends in your data sets, you should write a report that details your findings.  The report should explain your
+benchmarks, the evaluation metrics, and the key empirical results.  In particular, you should observe the performance
+trends and explain why these trends are evident in your data set.  Whenever possible, you should comment on the
+practical implications of your results for software developers who may use JoSQL.  
+
+You are responsible for working in a group to coordinate the experiments that you conduct.  In particular, you should
+make sure that each member of the group implements different benchmarks and then conducts experiments in a uniform
+manner.  After the members of the group have individually completed the experiments and recorded and analyzed their
+results, you should meet together to discuss the trends that you found in the data sets.  While students are responsible
+for writing their own reports that focus on their own data sets and analyses, they should work together in a group to
+prepare a single presentation for the laboratory session on which this assignment is due.  After explaining the purpose
+and configuration of your experimental study, the presentation should highlight the similarities and differences in the
+results developed by each group member.  Finally, you should draw some conclusions about which algorithmic approach
+and/or data management technique is the fastest.  Please note that each group member is responsible for independently
+conducting their own experiments, writing their own report, and adequately participating in the completion of the slides
+and the final presentation.  </p>
+
 
 \section*{Summary of the Required Deliverables}
 
