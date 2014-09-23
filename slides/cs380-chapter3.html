@@ -87,7 +87,7 @@
                 </section>
 
                 <section> 
-                    <h1 id="a_comparison">A Comparison</h1>
+                    <h1 id="a_comparison">Important Comparison</h1>
                     <p class="fragment">The distinction between DML and DDL can be confusing</p>
                     <p class="fragment">Compare: <b class="orange"><code>drop table r</code></b> and <b class="sky"><code>delete from r</code></b></p>
                     <p class="fragment">How are their actions similar and different?</p>
@@ -103,6 +103,27 @@
                     <p class="fragment">Wait, how does the DBMS execute the <code>SELECT</code>?</p>
                     <p class="fragment">A wide variety of additional basic operations</p>
                     <p class="fragment">Examining a <code>SELECT</code> in JoSQL</p>
+                </section>
+
+                <section data-background-transition="none" data-background="http://farm9.static.flickr.com/8554/8708214674_ef75ec5c90.jpg" style="">
+                </section>
+
+                <section data-background-transition="none" data-background="http://farm9.static.flickr.com/8554/8708214674_ef75ec5c90.jpg" style="background: rgba(29,31,33,0.9)">
+                    <h1>NULL Values</h1>
+                    <p class="fragment">Review: How do NULL values get into the database?</p>
+                    <p class="fragment">We're in trouble! Different DBMSs have different rules!</p>
+                    <p class="fragment">"But the descriptions in the SQL standards on how to handle NULLs seem ambiguous."</p>
+                    <p class="fragment">For more details, please read <a href = "http://www.sqlite.org/nulls.html">NULL Values in SQLite</a></p>
+                    <p class="fragment">What are some standard rules for NULL values?</p>
+<br /><small><a href="http://creativecommons.org/licenses/by-nc-nd/2.0/">creative commons licensed ( BY-NC-ND )</a> <a title="Shores Of Null" href="http://flickr.com/photos/separatesky/8708214674">flickr photo</a> shared by <a href="http://flickr.com/people/separatesky">Separate Sky</a></small>
+                </section>
+
+                <section>
+                    <h1 id="aggregation">Aggregation</h1>
+                    <p class="fragment">Use functions like MIN, MAX, AVG, SUM, and COUNT</p>
+                    <p class="fragment">Used in conjunction with GROUP BY clauses</p>
+                    <p class="fragment">The HAVING clause can be applied to each group</p>
+                    <p class="fragment">Declarative summarization of a data set</p>
                 </section>
 
             </div>
