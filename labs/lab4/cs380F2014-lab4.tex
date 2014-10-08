@@ -24,9 +24,9 @@ we will explore how to use a well-known database visualization tool, SQLFairy, t
 
 Since SQLFairy claims to produce something known as a ``psuedo-ER'' diagram, it is a good idea to review Section 7.5 of
 your textbook to learn more about how entity relationship (ER) diagrams aid in the design and understanding of database
-schemas. Instead of attempting to understand every details about ER diagrams, simply make sure that you understand 
+schemas. Instead of attempting to understand every detail about ER diagrams, simply make sure that you understand 
 the basics (e.g., the meaning of a box and an arrow). Now, please visit the SQLFairy Web site, available at
-\url{http://sqlfairy.sourceforge.net/} and learn more about the ``psuedo-ER'' diagrams that this tool produces. How are
+\url{http://sqlfairy.sourceforge.net/}, and learn more about the ``psuedo-ER'' diagrams that this tool produces. How are
 the textbook's diagrams similar to and different from those created by SQLFairy?
 
 \vspace*{-.05in}
@@ -52,46 +52,47 @@ option.  In particular, the tool supports the PostgreSQL, MySQL, and SQLite form
 these three options change the resulting psuedo-ER diagram? Additionally, the SQLFairy tool supports the ``{\tt
   --show-datatypes}'', ``{\tt show-sizes}'', and ``{\tt --show-constraints}'' command-line options.  In order to
 successfully complete this laboratory assignment, you should run the {\tt sqlt-graph} tool with all possible
-command-line options for all six of the relational schemas available in the Git repository. For each relational schema,
-you should also write a short commentary explaining at least one way in which the visualization helps you to understand
-an aspect of the database's structure. Before you turn in each of the visualizations, you should make sure that you
-annotate them with labels that state the name of the SQL file and the chosen command-line options. Please see the
-instructor if you are not able to run {\tt sqlt-graph}.
+combinations of these three command-line options for all six of the relational schemas available in the Git repository.
+For each relational schema, you should also write a short commentary explaining at least one way in which the
+visualization helps you to understand an aspect of the database's structure. Your writing should clearly explain the
+meaning of all the key graphical elements, such as the boxes and the arrows, contained in the diagrams. Before you turn
+in each of the visualizations, you should make sure that you annotate them with labels that state the name of the SQL
+file and the chosen command-line options. Please see the instructor if you are not able to run {\tt sqlt-graph} in the
+terminal.
 
 Finally, you should make your own SQL file that contains an original schema.  This schema should contain, in total, at
 least two tables, two constraints, and five attributes---and also be executable with the {\tt sqlite3} command-line
-tool. As you are creating this schema, please regularly produce the visualization and confirm that it conforms to your
+tool. As you are creating this schema, please regularly produce its visualization and confirm that it conforms to your
 mental model of the database.  After you have finished exploring the different options for schema visualization with
 SQLFairy, you should use the best mix of parameters to produce a final visualization with {\tt sqlt-graph}.  In addition
 to turning in its SQL source code, please make sure that you submit a labelled version of this schema visualization that
 gives its name and the parameters used to create the diagram. 
 
-
 \section*{Summary of the Required Deliverables}
 
-You and your team should always use your Git repository, hosted by Bitbucket, to store the source code of your
-benchmarking framework, all of the CSV data files, the final report, and the presentation slides. The repository must be
-shared with the course instructor and the version control log should accurately reflect each student's contribution to
-this assignment. In addition, this assignment invites your team to submit one printed version of the following
-deliverables; each member should write and submit their own version of the first deliverable. 
+You and your partner should always use a Git repository, hosted by Bitbucket, to store the schema visualizations and
+all of the other deliverables required by this assignment. The repository must be shared with the course instructor and
+the version control log should accurately reflect each student's contribution to this assignment. In addition, this
+assignment invites your partnership to submit one printed version of the following deliverables; each member should
+write and submit their own version of the first deliverable. Please see the instructor if you have any questions.
 
 % \vspace*{-.05in}
 
 \begin{enumerate}
-    % \setlength{\itemsep}{0pt}
-  \item A five paragraph commentary on the work that each team member completed. 
-  \item A full-featured description of the key features provided by the JoSQL library.
-  \item The output from each team member's use of the {\tt FileFinder.java} program.
-  \item The properly formatted and documented version of the source code for your benchmarks.
-  \item The CSV data files resulting from all of the runs of your benchmarking framework.
-  \item A comprehensive report describing your benchmarks, the evaluation metrics, and the results.
-    \item The presentation slides to support your team's five minute presentation.
+  \setlength{\itemsep}{0pt}
+  \item A two paragraph commentary on the work that each team member completed. 
+  \item An overview of how the {\tt sqlt-graph} command-line options influence the diagrams.
+  \item A comparison of the University visualizations from the textbook and the {\tt sqlt-graph} tool.
+  \item A brief commentary on the visualizations produced for each of the provided schemas.
+  \item The complete and commented SQL source code for the student-designed relational schema.
+  \item The final visualization of the student-designed relational schema, as produced by {\tt sqlt-graph}.
+  \item A reflection on the challenges that you faced when completing this laboratory assignment.
 \end{enumerate}
 
 % \vspace*{-.1in} 
 
 In adherence to the Honor Code, students should complete this assignment while exclusively collaborating with the
-members of their team. While it is appropriate for students in this class---who are not in the same team---to have
+other member of their team. While it is appropriate for students in this class---who are not in the same team---to have
 high-level conversations about the assignment, it is necessary to distinguish carefully between the team that discusses
 the principles underlying a problem with another team and the team that produces an assignment that is identical to, or
 merely a variation on, the work of another team.  Deliverables from one team that are nearly identical to the work of
@@ -100,8 +101,5 @@ another team will be taken as evidence of violating Allegheny College's \mbox{Ho
 % Before you turn in this assignment, you also must ensure that the course instructor has read access to your Bitbucket
 % repository that is named according to the convention {\tt cs380F2014-<your user name>}.  Please see the instructor if
 % you have any questions about this assignment. 
-
-
-
 
 \end{document}
