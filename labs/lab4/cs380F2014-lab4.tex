@@ -19,13 +19,52 @@ When designing a new database schema, a technical diagram helps a person to see 
 tables and identify potential sources of performance bottlenecks or correctness concerns. In this laboratory assignment,
 we will explore how to use a well-known database visualization tool, SQLFairy, to show database schemas.
 
+\vspace*{-.05in}
 \section*{Learning About Schema Visualization}
 
+Since SQLFairy claims to produce something known as a ``psuedo-ER'' diagram, it is a good idea to review Section 7.5 of
+your textbook to learn more about how entity relationship (ER) diagrams aid in the design and understanding of database
+schemas. Instead of attempting to understand every details about ER diagrams, simply make sure that you understand 
+the basics (e.g., the meaning of a box and an arrow). Now, please visit the SQLFairy Web site, available at
+\url{http://sqlfairy.sourceforge.net/} and learn more about the ``psuedo-ER'' diagrams that this tool produces. How are
+the textbook's diagrams similar to and different from those created by SQLFairy?
+
+\vspace*{-.05in}
 \section*{Using SQLFairy for Schema Visualization}
 
-\section*{Exploring Schema Visualization Options}
-\vspace*{-.2in}
+The SQLFairy suite of tools is available on your workstation, through programs like {\tt sqlt-graph}.  In your terminal
+window, type the commands ``{\tt man sqlt-graph}'' and ``{\tt sqlt-graph --help}'' to learn more about how this program
+works. Once you and your partner understand the features that this tool provides, change into the course repository and
+type the command ``{\tt git pull}''. If you change to the {\tt cs380F2014-share/labs/lab4/} directory you should now see
+that there are a total of six SQL files that define the schemas of six databases. As you first learn to use the {\tt
+  sqlt-graph} tool, try to visualize the schema of the {\tt University.sql} file that was downloaded from the Web site
+for the course's textbook. How does this visualization compare to the one in Figure 7.15? 
 
+As you are creating schema visualizations for this assignment, you should save the output of {\tt sqlt-graph} in the PNG
+format.  When you want to view a PNG file created by the visualizer, you can use the {\tt xdg-open} command in your
+terminal or load the file through the graphical file browser.
+
+\vspace*{-.05in}
+\section*{Exploring Schema Visualization Options}
+
+As you may have noticed, SQLFairy supports different dialects of the structured query language using the ``{\tt -d}''
+option.  In particular, the tool supports the PostgreSQL, MySQL, and SQLite formats.  How does the specification of
+these three options change the resulting psuedo-ER diagram? Additionally, the SQLFairy tool supports the ``{\tt
+  --show-datatypes}'', ``{\tt show-sizes}'', and ``{\tt --show-constraints}'' command-line options.  In order to
+successfully complete this laboratory assignment, you should run the {\tt sqlt-graph} tool with all possible
+command-line options for all six of the relational schemas available in the Git repository. For each relational schema,
+you should also write a short commentary explaining at least one way in which the visualization helps you to understand
+an aspect of the database's structure. Before you turn in each of the visualizations, you should make sure that you
+annotate them with labels that state the name of the SQL file and the chosen command-line options. Please see the
+instructor if you are not able to run {\tt sqlt-graph}.
+
+Finally, you should make your own SQL file that contains an original schema.  This schema should contain, in total, at
+least two tables, two constraints, and five attributes---and also be executable with the {\tt sqlite3} command-line
+tool. As you are creating this schema, please regularly produce the visualization and confirm that it conforms to your
+mental model of the database.  After you have finished exploring the different options for schema visualization with
+SQLFairy, you should use the best mix of parameters to produce a final visualization with {\tt sqlt-graph}.  In addition
+to turning in its SQL source code, please make sure that you submit a labelled version of this schema visualization that
+gives its name and the parameters used to create the diagram. 
 
 
 \section*{Summary of the Required Deliverables}
