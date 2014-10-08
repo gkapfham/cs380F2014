@@ -22,11 +22,11 @@ we will explore how to use a well-known database visualization tool, SQLFairy, t
 \vspace*{-.05in}
 \section*{Learning About Schema Visualization}
 
-Since SQLFairy claims to produce something known as a ``psuedo-ER'' diagram, it is a good idea to review Section 7.5 of
+Since SQLFairy claims to produce something known as a ``pseudo-ER'' diagram, it is a good idea to review Section 7.5 of
 your textbook to learn more about how entity relationship (ER) diagrams aid in the design and understanding of database
-schemas. Instead of attempting to understand every detail about ER diagrams, simply make sure that you understand 
+schemas. Instead of attempting to understand every detail about ER diagrams, you should make sure that you understand
 the basics (e.g., the meaning of a box and an arrow). Now, please visit the SQLFairy Web site, available at
-\url{http://sqlfairy.sourceforge.net/}, and learn more about the ``psuedo-ER'' diagrams that this tool produces. How are
+\url{http://sqlfairy.sourceforge.net/}, and learn more about the ``pseudo-ER'' diagrams that this tool produces. How are
 the textbook's diagrams similar to and different from those created by SQLFairy?
 
 \vspace*{-.05in}
@@ -49,8 +49,8 @@ terminal or load the file through the graphical file browser.
 
 As you may have noticed, SQLFairy supports different dialects of the structured query language using the ``{\tt -d}''
 option.  In particular, the tool supports the PostgreSQL, MySQL, and SQLite formats.  How does the specification of
-these three options change the resulting psuedo-ER diagram? Additionally, the SQLFairy tool supports the ``{\tt
-  --show-datatypes}'', ``{\tt show-sizes}'', and ``{\tt --show-constraints}'' command-line options.  In order to
+these three options change the resulting pseudo-ER diagram? Additionally, the SQLFairy tool supports the ``{\tt
+  --show-datatypes}'', ``{\tt --show-sizes}'', and ``{\tt --show-constraints}'' command-line options.  In order to
 successfully complete this laboratory assignment, you should run the {\tt sqlt-graph} tool with all possible
 combinations of these three command-line options for all six of the relational schemas available in the Git repository.
 For each relational schema, you should also write a short commentary explaining at least one way in which the
@@ -71,17 +71,18 @@ gives its name and the parameters used to create the diagram.
 \section*{Summary of the Required Deliverables}
 
 You and your partner should always use a Git repository, hosted by Bitbucket, to store the schema visualizations and
-all of the other deliverables required by this assignment. The repository must be shared with the course instructor and
+all of the other deliverables required by this assignment. The repository must be shared with the instructor and
 the version control log should accurately reflect each student's contribution to this assignment. In addition, this
 assignment invites your partnership to submit one printed version of the following deliverables; each member should
-write and submit their own version of the first deliverable. Please see the instructor if you have any questions.
+write and submit their own version of the first deliverable. Please see the instructor if you have questions about
+these matters.
 
 % \vspace*{-.05in}
 
 \begin{enumerate}
   \setlength{\itemsep}{0pt}
   \item A two paragraph commentary on the work that each team member completed. 
-  \item An overview of how the {\tt sqlt-graph} command-line options influence the diagrams.
+  \item An overview of how the {\tt sqlt-graph} command-line options influence the resulting diagrams.
   \item A comparison of the University visualizations from the textbook and the {\tt sqlt-graph} tool.
   \item A brief commentary on the visualizations produced for each of the provided schemas.
   \item The complete and commented SQL source code for the student-designed relational schema.
