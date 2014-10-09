@@ -118,6 +118,41 @@ if( window.location.search.match( /print-pdf/gi ) ) {
                     <p class="fragment">What are the trade-offs for CHECK constraints?</p>
                 </section>
 
+                <section>
+                    <h1 id="assertion_checking">Assertion Checking</h1>
+                    <p class="fragment">Express a condition that we want the database to satisfy</p>
+                    <p class="fragment">#1: Create an assertion</p>
+                    <p class="fragment">#2: Is it initially valid?</p>
+                    <p class="fragment">#3: Check the assertion at every state manipulation</p>
+                    <p class="fragment">Trade-off: Expressivity vs. Checking Cost</p>
+                </section>
+
+                <section>
+                    <h1 id="referential_integrity">Referential Integrity</h1>
+                    <p class="fragment">A FOREIGN KEY between Instructor and Department</p>
+                    <p class="fragment">What if a DELETE statement leads to a violation?</p>
+                    <p class="fragment">Maybe the DBMS should allow "cascading"?</p>
+                    <p class="fragment">ON DELETE CASCADE or ON UPDATE CASCADE</p>
+                    <p class="fragment">What are the risks associated with these options?</p>
+                </section>
+
+                <section>
+                    <h1 id="constraints_and_transactions">Constraint Enforcement</h1>
+                    <p class="fragment">Re-focus our attention on transaction processing</p>
+                    <p class="fragment">A transaction can contain many steps</p>
+                    <p class="fragment">What if a constraint is violated by a step?</p>
+                    <p class="fragment">What options can the DBMS consider?</p>
+                </section>
+
+                <section>
+                    <h1 id="constraints_and_transactions">Enforcement Options</h1>
+                    <p class="fragment">#1: Check constraints immediately</p>
+                    <p class="fragment">#2: Constraints initially deferred</p>
+                    <p class="fragment">#3: Constraints are deferrable</p>
+                    <p class="fragment">What are the trade-offs associated with these options?</p>
+                    <p class="fragment">How would we determine which option is best?</p>
+                </section>
+
             </div>
 
         </div>
