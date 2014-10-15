@@ -1,0 +1,105 @@
+%!TEX root=cs380F2014-lab5.tex
+% mainfile: cs380F2014-lab5.tex
+
+\input{labspre.tex}
+
+\usepackage[compact]{titlesec}
+
+\begin{document}
+\MYTITLE{Laboratory Assignment Five \\ Using the SQL Data Manipulation
+Language 
+  }
+\MYHEADERS{Laboratory Assignment Five}{Due: October 22, 2014}
+
+\section*{Introduction}
+
+After creating and visualizing a relational database schema, it is important to define the data manipulation language
+(DML) statements that are needed to support interact with the database.  In this laboratory assignment, you will create
+a wide variety of DML commands---like the SQL {\tt insert}, {\tt update}, and {\tt delete}---and executed them against a
+SQLite database.
+
+\vspace*{-.05in}
+\section*{Learning About Schema Visualization}
+
+Since SQLFairy claims to produce something known as a ``pseudo-ER'' diagram, it is a good idea to review Section 7.5 of
+your textbook to learn more about how entity relationship (ER) diagrams aid in the design and understanding of database
+schemas. Instead of attempting to understand every detail about ER diagrams, you should make sure that you understand
+the basics (e.g., the meaning of a box and an arrow). Now, please visit the SQLFairy Web site, available at
+\url{http://sqlfairy.sourceforge.net/}, and learn more about the ``pseudo-ER'' diagrams that this tool produces. How are
+the textbook's diagrams similar to and different from those created by SQLFairy?
+
+\vspace*{-.05in}
+\section*{Using SQLFairy for Schema Visualization}
+
+The SQLFairy suite of tools is available on your workstation, through programs like {\tt sqlt-graph}.  In your terminal
+window, type the commands ``{\tt man sqlt-graph}'' and ``{\tt sqlt-graph --help}'' to learn more about how this program
+works. Once you and your partner understand the features that this tool provides, change into the course repository and
+type the command ``{\tt git pull}''. If you change to the {\tt cs380F2014-share/labs/lab4/} directory you should now see
+that there are a total of six SQL files that define the schemas of six databases. As you first learn to use the {\tt
+  sqlt-graph} tool, try to visualize the schema of the {\tt University.sql} file that was downloaded from the Web site
+for the course's textbook. How does this visualization compare to the one in Figure 7.15? 
+
+As you are creating schema visualizations for this assignment, you should save the output of {\tt sqlt-graph} in the PNG
+format.  When you want to view a PNG file created by the visualizer, you can use the {\tt xdg-open} command in your
+terminal or load the file through the graphical file browser.
+
+\vspace*{-.05in}
+\section*{Exploring Schema Visualization Options}
+
+As you may have noticed, SQLFairy supports different dialects of the structured query language using the ``{\tt -d}''
+option.  In particular, the tool supports the PostgreSQL, MySQL, and SQLite formats.  How does the specification of
+these three options change the resulting pseudo-ER diagram? Additionally, the SQLFairy tool supports the ``{\tt
+  --show-datatypes}'', ``{\tt --show-sizes}'', and ``{\tt --show-constraints}'' command-line options.  In order to
+successfully complete this laboratory assignment, you should run the {\tt sqlt-graph} tool with all possible
+combinations of these three command-line options for all six of the relational schemas available in the Git repository.
+For each relational schema, you should also write a short commentary explaining at least one way in which the
+visualization helps you to understand an aspect of the database's structure. Your writing should clearly explain the
+meaning of all the key graphical elements, such as the boxes and the arrows, contained in the diagrams. Before you turn
+in each of the visualizations, you should make sure that you annotate them with labels that state the name of the SQL
+file and the chosen command-line options. Please see the instructor if you are not able to run {\tt sqlt-graph} in the
+terminal.
+
+Finally, you should make your own SQL file that contains an original schema.  This schema should contain, in total, at
+least two tables, two constraints, and five attributes---and also be executable with the {\tt sqlite3} command-line
+tool. As you are creating this schema, please regularly produce its visualization and confirm that it conforms to your
+mental model of the database.  After you have finished exploring the different options for schema visualization with
+SQLFairy, you should use the best mix of parameters to produce a final visualization with {\tt sqlt-graph}.  In addition
+to turning in its SQL source code, please make sure that you submit a labelled version of this schema visualization that
+gives its name and the parameters used to create the diagram. 
+
+\section*{Summary of the Required Deliverables}
+
+You and your partner should always use a Git repository, hosted by Bitbucket, to store the schema visualizations and
+all of the other deliverables required by this assignment. The repository must be shared with the instructor and
+the version control log should accurately reflect each student's contribution to this assignment. In addition, this
+assignment invites your partnership to submit one printed version of the following deliverables; each member should
+write and submit their own version of the first deliverable. Please see the instructor if you have questions about
+these matters.
+
+% \vspace*{-.05in}
+
+\begin{enumerate}
+  \setlength{\itemsep}{0pt}
+  \item A two paragraph commentary on the work that each team member completed. 
+  \item An overview of how the {\tt sqlt-graph} command-line options influence the resulting diagrams.
+  \item A comparison of the University visualizations from the textbook and the {\tt sqlt-graph} tool.
+  \item A brief commentary on the visualizations produced for each of the provided schemas.
+  \item The complete and commented SQL source code for the student-designed relational schema.
+  \item The final visualization of the student-designed relational schema, as produced by {\tt sqlt-graph}.
+  \item A reflection on the challenges that you faced when completing this laboratory assignment.
+\end{enumerate}
+
+% \vspace*{-.1in} 
+
+In adherence to the Honor Code, students should complete this assignment while exclusively collaborating with the
+other member of their team. While it is appropriate for students in this class---who are not in the same team---to have
+high-level conversations about the assignment, it is necessary to distinguish carefully between the team that discusses
+the principles underlying a problem with another team and the team that produces an assignment that is identical to, or
+merely a variation on, the work of another team.  Deliverables from one team that are nearly identical to the work of
+another team will be taken as evidence of violating Allegheny College's \mbox{Honor Code}.
+
+% Before you turn in this assignment, you also must ensure that the course instructor has read access to your Bitbucket
+% repository that is named according to the convention {\tt cs380F2014-<your user name>}.  Please see the instructor if
+% you have any questions about this assignment. 
+
+\end{document}
