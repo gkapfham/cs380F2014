@@ -74,6 +74,40 @@ if( window.location.search.match( /print-pdf/gi ) ) {
                     <p class="fragment">Database interaction with drivers: JDBC and ODBC</p>
                 </section>
 
+                <section>
+                    <h1 id="great_challenge:_data_type_mismatches">Great Challenge: Data Type Mismatches</h1>
+                </section>
+
+                <section>
+                    <h1 id="using_jdbc_in_java">JDBC in Java</h1>
+                    <p class="fragment">#1: Connect to the Database</p>
+                    <p class="fragment">#2: Ship SQL to the Database</p>
+                    <p class="fragment">#3: Retrieve the Results of a Query</p>
+                    <p class="fragment">Database interactions with PreparedStatement</p>
+                    <p class="fragment">Avoiding SQL injection attacks</p>
+                    <p class="fragment">Transferring result data using a RowSet</p>
+                </section>
+
+                <section>
+                    <h1 id="meta_data">Meta Data</h1>
+                    <p class="fragment">What is meta data?</p>
+                    <p class="fragment">How can a program learn about database structure?</p>
+                    <p class="fragment">#1: Use an external database program</p>
+                    <p class="fragment">#2: Use the ResultSetMetaData</p>
+                    <p class="fragment">Extract details about database columns</p>
+                    <p class="fragment">Or, use the DatabaseMetaData!</p>
+                    <p class="fragment">Benefits: database browsers and generic code</p>
+                </section>
+
+                <section>
+                    <h1 id="sql_embedding">SQL Embedding</h1>
+                    <p class="fragment">Requires: host language and "embeddable" SQL code</p>
+                    <p class="fragment">Wait, this sounds very limited!</p>
+                    <p class="fragment">But, there are some benefits as well!</p>
+                    <p class="fragment">Type checking of the SQL interactions</p>
+                    <p class="fragment">Research prototypes are changing the situation</p>
+                </section>
+
             </div>
 
         </div>
