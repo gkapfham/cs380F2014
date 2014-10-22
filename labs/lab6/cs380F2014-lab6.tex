@@ -49,27 +49,39 @@ partner should see the instructor if you are not able to get the {\tt FindFile} 
 \vspace*{-.05in}
 \section*{Implementing a Database-Centric Application}
 
-
+After you and your partner completely understand how {\tt FindFile} works, you should pick a relational database schema
+that one of you used in one of the past two assignments. Leveraging the schema visualizations and data manipulation
+language (DML) statements that you previously created, you and your partner should think of a full-featured program that
+might interact with the database. In adherence to the ``dynamic SQL'' approach to implementing database-centric
+applications and in recognition of the strengths and weaknesses of HSQLDB, you should design either a command-line or
+graphical interface for your program. What operations will your application support? How will these methods use DML
+statements like {\tt select}, {\tt update}, {\tt insert}, and {\tt delete} to change the state of the database? How will
+you test your program to ensure that it is correct?
 
 \section*{Summary of the Required Deliverables}
 
-You and your partner should always use a Git repository, hosted by Bitbucket, to store the schema visualizations and
-all of the other deliverables required by this assignment. The repository must be shared with the instructor and
-the version control log should accurately reflect each student's contribution to this assignment. In addition, this
-assignment invites your partnership to submit one printed version of the following deliverables; each member should
-write and submit their own version of the first deliverable. Please see the instructor if you have questions about
-these matters.
+You and your partner should always use a Git repository, hosted by Bitbucket, to store the schema visualizations, source
+code, database files, and all of the other deliverables required by this assignment. The repository must be shared with
+the instructor and the version control log should accurately reflect each student's contribution to this assignment. In
+addition, this assignment invites your partnership to submit one printed version of the following deliverables; each
+member should write and submit their own version of the first deliverable. Please see the instructor if you have
+questions about the deliverables that you must submit for this assignment.
 
 % \vspace*{-.05in}
 
 \begin{enumerate}
-  \setlength{\itemsep}{0pt}
+    \setlength{\itemsep}{0pt}
   \item A two paragraph commentary on the work that each team member completed. 
-  \item An overview of how the {\tt sqlt-graph} command-line options influence the resulting diagrams.
-  \item A comparison of the University visualizations from the textbook and the {\tt sqlt-graph} tool.
-  \item A brief commentary on the visualizations produced for each of the provided schemas.
-  \item The complete and commented SQL source code for the student-designed relational schema.
-  \item The final visualization of the student-designed relational schema, as produced by {\tt sqlt-graph}.
+  \item A commentary on the features, strengths, and weaknesses of the HyperSQL database engine.
+  \item A technical diagram explaining the structure and behavior of the {\tt FindFile} program.
+  \item A pseudo-ER diagram, produced by {\tt sqlt-graph}, of {\tt FindFile}'s relational schema.
+  \item A description of the steps taken to compile and run the {\tt FindFile} program.
+  \item The output from three separate runs of both phases of the {\tt FindFile} program.
+  \item A natural-language description of the features provided by your chosen application.
+  \item An explanation of how you use the ``dynamic SQL'' method to interact with HSQLDB.
+  \item A pseudo-ER diagram, produced by {\tt sqlt-graph}, of your application's relational schema.
+  \item The output from three separate runs of your database-centric application.
+  \item A description of the steps that you took to ensure the correctness of your program.
   \item A reflection on the challenges that you faced when completing this laboratory assignment.
 \end{enumerate}
 
