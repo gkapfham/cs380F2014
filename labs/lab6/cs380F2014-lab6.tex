@@ -30,10 +30,24 @@ database, how does HSQLDB persist the data values? What applications currently u
 \vspace*{-.05in}
 \section*{Compiling and Using the FindFile Program}
 
+Please use a terminal window to navigate to the ``share'' Git repository that we use for this course and type the ``{\tt
+  git pull}'' command. Once the download is finished, please study the source code that is available in the {\tt
+  FindFile.java} program.  You and your partner should discuss this program, drawing diagrams and referencing the
+textbook as necessary, until you understand its structure and behavior. It is important to note that {\tt FindFile} must
+run in two separate phases: an initialize phase and then a searching phase. Why does the program work in this fashion?
+Please pick a suitable directory in your file system (i.e., one that contains many files with different names), and run
+both phases of {\tt FindFile}. What are the inputs and outputs of this program?
 
+If you want to compile and run the {\tt FindFile} program, you need to set your {\tt CLASSPATH} environment variable to
+contain the {\tt hsqldb.jar} file that is in the {\tt lib/} directory. It is worth noting that {\tt FindFile.java} will
+compile without {\tt hsqldb.jar} being available from the {\tt CLASSPATH}---and yet, the program will not run without
+this environment variable being set correctly.  Why is this the case? Once you understand how this program interacts
+with the HyperSQL database engine, you should run it multiple times to learn how it persists data on the file system.
+What does the schema of {\tt FindFile}'s database look like? Can you visualize it with {\tt sqlt-graph}? You and your
+partner should see the instructor if you are not able to get the {\tt FindFile} to work correctly.
 
 \vspace*{-.05in}
-\section*{Implementing a Database Centric Application}
+\section*{Implementing a Database-Centric Application}
 
 
 
