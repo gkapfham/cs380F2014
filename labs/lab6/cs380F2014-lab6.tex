@@ -6,35 +6,35 @@
 \usepackage[compact]{titlesec}
 
 \begin{document}
-\MYTITLE{Laboratory Assignment Six \\ Implementing Database-Centric
+\MYTITLE{Laboratory Assignment Six \\ Implementing and Evaluating Database-Centric
 Applications}
 \MYHEADERS{Laboratory Assignment Six}{Due: October 29, 2014}
 
 \section*{Introduction}
 
-Chapter 5 of your textbook introduces advanced concepts in the structure query language (SQL), with a focus on topics
-like accessing a database from a programming language. In this laboratory assignment, you will leverage the example in
-Figure 5.1 of the textbook to ultimately implement your own database-centric application based on a schema that you
-visualized and manipulated in the past two assignments. In addition to using a simple Java program that uses a
-databases, you will explore more about the configuration and use of the HyperSQL database engine.
+Chapter 5 of your textbook introduces advanced concepts in the structure query language (SQL), with an initial focus on
+topics like accessing a database from a programming language. In this laboratory assignment, you will leverage the
+example in Figure 5.1 of the textbook to ultimately implement your own database-centric application based on a schema
+that you visualized and manipulated in the past two assignments. In addition to using a simple Java program that uses a
+databases, you will learn more about the configuration and use of the HyperSQL database engine.
 
 \vspace*{-.05in}
 \section*{Learning About the HyperSQL Database Engine}
 
-Please visit \url{http://hsqldb.org/} to learn more about the HyperSQL database engine, often called HSQLDB. This
-database management system (DBMS) claims to be a ``100\% Java Database''---what are the benefits and drawbacks associated with
-having a database that is completely implemented in the Java programming language? What are the features and
-limitations associated with using this DBMS? When a database application is not running and interacting with the
-database, how does HSQLDB persist the data values? What applications currently use HSQLDB?
+Please visit \url{http://hsqldb.org/} to find out more about the HyperSQL database engine, often called HSQLDB. This
+database management system (DBMS) claims to be a ``100\% Java Database''---what are the benefits and drawbacks
+associated with having a database that is completely implemented in the Java programming language? What are the features
+and limitations associated with using this DBMS? When an application is not interacting with the database, how does
+HSQLDB persist the data values? What applications currently tout their \mbox{use HSQLDB}?
 
 \vspace*{-.05in}
 \section*{Compiling and Using the FindFile Program}
 
 Please use a terminal window to navigate to the ``share'' Git repository that we use for this course and type the ``{\tt
-  git pull}'' command. Once the download is finished, please study the source code that is available in the {\tt
+  git pull}'' command. Once the download is finished, please study the source code that is available for the {\tt
   FindFile.java} program.  You and your partner should discuss this program, drawing diagrams and referencing the
 textbook as necessary, until you understand its structure and behavior. It is important to note that {\tt FindFile} must
-run in two separate phases: an initialize phase and then a searching phase. Why does the program work in this fashion?
+run in two separate phases: an initialization phase and then a searching phase. Why does the program work in this fashion?
 Please pick a suitable directory in your file system (i.e., one that contains many files with different names), and run
 both phases of {\tt FindFile}. What are the inputs and outputs of this program?
 
@@ -44,7 +44,7 @@ compile without {\tt hsqldb.jar} being available from the {\tt CLASSPATH}---and 
 this environment variable being set correctly.  Why is this the case? Once you understand how this program interacts
 with the HyperSQL database engine, you should run it multiple times to learn how it persists data on the file system.
 What does the schema of {\tt FindFile}'s database look like? Can you visualize it with {\tt sqlt-graph}? You and your
-partner should see the instructor if you are not able to get the {\tt FindFile} to work correctly.
+partner should see the instructor if you are not able to get {\tt FindFile} to work correctly.
 
 \vspace*{-.05in}
 \section*{Implementing a Database-Centric Application}
@@ -65,7 +65,7 @@ code, database files, and all of the other deliverables required by this assignm
 the instructor and the version control log should accurately reflect each student's contribution to this assignment. In
 addition, this assignment invites your partnership to submit one printed version of the following deliverables; each
 member should write and submit their own version of the first deliverable. Please see the instructor if you have
-questions about the deliverables that you must submit for this assignment.
+questions about the deliverables that you must turn in for this assignment.
 
 % \vspace*{-.05in}
 
