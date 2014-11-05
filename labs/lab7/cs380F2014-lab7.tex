@@ -15,7 +15,7 @@ Chapter 23 of your textbook introduces the basics of the eXtensible markup langu
 semi-structured approach to data management has become the defacto way to exchange data. In this laboratory assignment,
 you will explore some of the trade-offs associated with the use of XML, with a particular focus on the time and space
 overheads associated with storing data in this format. In particular, you will implement a benchmarking framework that
-can serialize a Java object to both the binary and XML formats.  Finally, you and your partner will write a 
+can serialize a Java object to both the default and XML formats.  Finally, you and your partner will write a 
 report that describes and explains the performance trends revealed by your benchmark.
 
 \vspace*{-.05in}
@@ -28,20 +28,20 @@ a Java object? You can learn more about how Java performs serialization by study
 this default approach to serialization, what do you think are the trade-offs associated with it?
 
 Of course, there are alternatives to Java's standard technique for serialization.  For instance, XStream gives a
-programmer the ability to write a heap-resident object to an XML file. In comparison to using binary serialization, what
+programmer the ability to write a heap-resident object to an XML file. In comparison to using default serialization, what
 would be the benefits of storing objects in XML files using XStream? You can learn more about how XStream works by
 visiting this Web site: \url{http://xstream.codehaus.org/}. You can learn many of the basics about XStream by reading
 the tutorials that are available on the aforementioned Web site; the ``Two Minute Tutorial'' provides a simple
 introduction to the steps that you must take to serialize and deserialize a Java object. 
 
 \vspace*{-.05in}
-\section*{Using Binary and XML Serializers in Java}
+\section*{Using the Default and XML-Based Serializers in Java}
 
 You are your partner should create a Git repository, using Bitbucket, that you can use to complete this laboratory
 assignment.  To start off this project, one of you should go into the ``share'' repository for this course and run the
 ``{\tt git pull}'' command. After investigating the directories for this assignment, you will find the {\tt lab7/src/}
 and {\tt lab7/lib/} directories. What files do these directories contain? How does this program work? Please note that
-the provided version of the benchmark does not yet provide the features necessary to evaluate the performance of binary
+the provided version of the benchmark does not yet provide the features necessary to evaluate the performance of default 
 and XML serialization---you and your partner will add this code as part of the laboratory assignment.
 
 Make sure that both team members are able to compile and run the current version of the ``{\tt
