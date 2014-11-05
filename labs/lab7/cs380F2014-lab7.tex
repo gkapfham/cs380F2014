@@ -1,14 +1,14 @@
-%!TEX root=cs380F2014-lab6.tex
-% mainfile: cs380F2014-lab6.tex
+%!TEX root=cs380F2014-lab7.tex
+% mainfile: cs380F2014-lab7.tex
 
 \input{labspre.tex}
 
 \usepackage[compact]{titlesec}
 
 \begin{document}
-\MYTITLE{Laboratory Assignment Six \\ Implementing and Evaluating Database-Centric
+\MYTITLE{Laboratory Assignment Seven \\ Implementing and Evaluating Database-Centric
 Applications}
-\MYHEADERS{Laboratory Assignment Six}{Due: October 30, 2014}
+\MYHEADERS{Laboratory Assignment Seven}{Due: November 11, 2014}
 
 \section*{Introduction}
 
@@ -21,46 +21,19 @@ databases, you will learn more about the configuration and use of the HyperSQL d
 \vspace*{-.05in}
 \section*{Learning About the HyperSQL Database Engine}
 
-Please visit \url{http://hsqldb.org/} to find out more about the HyperSQL database engine, often called HSQLDB. This
-database management system (DBMS) claims to be a ``100\% Java Database''---what are the benefits and drawbacks
-associated with having a database that is completely implemented in the Java programming language? What are the features
-and limitations associated with using this DBMS? When an application is not interacting with the database, how does
-HSQLDB persist the data values? What applications currently tout their \mbox{use HSQLDB}?
 
 \vspace*{-.05in}
 \section*{Compiling and Using the FindFile Program}
 
-Please use a terminal window to navigate to the ``share'' Git repository that we use for this course and type the ``{\tt
-  git pull}'' command. Once the download is finished, please study the source code that is available for the {\tt
-  FindFile.java} program.  You and your partner should discuss this program, drawing diagrams and referencing the
-textbook as necessary, until you understand its structure and behavior. It is important to note that {\tt FindFile} must
-run in two separate phases: an initialization phase and then a searching phase. Why does the program work in this fashion?
-Please pick a suitable directory in your file system (i.e., one that contains many files with different names), and run
-both phases of {\tt FindFile}. What are the inputs and outputs of this program?
 
-If you want to compile and run the {\tt FindFile} program, you need to set your {\tt CLASSPATH} environment variable to
-contain the {\tt hsqldb.jar} file that is in the {\tt lib/} directory. It is worth noting that {\tt FindFile.java} will
-compile without {\tt hsqldb.jar} being available from the {\tt CLASSPATH}---and yet, the program will not run without
-this environment variable being set correctly.  Why is this the case? Once you understand how this program interacts
-with the HyperSQL database engine, you should run it multiple times to learn how it persists data on the file system.
-What does the schema of {\tt FindFile}'s database look like? Can you visualize it with {\tt sqlt-graph}? You and your
-partner should see the instructor if you are not able to get {\tt FindFile} to work correctly.
 
 \vspace*{-.05in}
 \section*{Implementing a Database-Centric Application}
 
-After you and your partner completely understand how {\tt FindFile} works, you should pick a relational database schema
-that one of you used in one of the past two assignments. Leveraging the schema visualizations and data manipulation
-language (DML) statements that you previously created, you and your partner should think of a full-featured program that
-might interact with the database. In adherence to the ``dynamic SQL'' approach to implementing database-centric
-applications and in recognition of the strengths and weaknesses of HSQLDB, you should design either a command-line or
-graphical interface for your program. What operations will your application support? How will these methods use DML
-statements like {\tt select}, {\tt update}, {\tt insert}, and {\tt delete} to change the state of the database? How will
-you test your program to ensure that it is correct?
 
 \section*{Summary of the Required Deliverables}
 
-You and your partner should always use a Git repository, hosted by Bitbucket, to store the schema visualizations, source
+You and your partner should always use a Git repository, hosted by Bitbucket, to store the source
 code, database files, and all of the other deliverables required by this assignment. The repository must be shared with
 the instructor and the version control log should accurately reflect each student's contribution to this assignment. In
 addition, this assignment invites your partnership to submit one printed version of the following deliverables; each
@@ -72,16 +45,11 @@ questions about the deliverables that you must turn in for this assignment.
 \begin{enumerate}
     \setlength{\itemsep}{0pt}
   \item A two paragraph commentary on the work that each team member completed. 
-  \item A commentary on the features, strengths, and weaknesses of the HyperSQL database engine.
-  \item A technical diagram explaining the structure and behavior of the {\tt FindFile} program.
-  \item A pseudo-ER diagram, produced by {\tt sqlt-graph}, of {\tt FindFile}'s relational schema.
-  \item A description of the steps taken to compile and run the {\tt FindFile} program.
-  \item The output from three separate runs of both phases of the {\tt FindFile} program.
-  \item A natural-language description of the features provided by your chosen application.
-  \item An explanation of how you use the ``dynamic SQL'' method to interact with HSQLDB.
-  \item A pseudo-ER diagram, produced by {\tt sqlt-graph}, of your application's relational schema.
-  \item The output from three separate runs of your database-centric application.
-  \item A description of the steps that you took to ensure the correctness of your program.
+  \item A description of the eXtensible markup language and its features, strengths, and weaknesses.
+  \item An explanation of the binary serialization method provided by the Java language.
+    \item The final version of the source code for your serialization benchmarking framework.
+      \item Output from at least five runs of your benchmarks, demonstrating features and correctness.
+  \item A detailed report addressing the performance trade-offs associated with serialization.
   \item A reflection on the challenges that you faced when completing this laboratory assignment.
 \end{enumerate}
 
