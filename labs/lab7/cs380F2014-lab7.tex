@@ -22,6 +22,18 @@ report that describes and explains the performance trends revealed by your bench
 \vspace*{-.05in}
 \section*{Learning About Serialization Methods}
 
+The Java programming language provides a default serialization method that transforms a Java object, resident in the
+heap of the Java virtual machine (JVM), into a format that can be saved to the disk. Why would it be useful to serialize
+a Java object? You can learn more about how Java performs serialization by studying the following Web site:
+\url{http://docs.oracle.com/javase/7/docs/technotes/guides/serialization/index.html}. After learning more about using
+this default approach to serialization, what do you think are the trade-offs associated with it?
+
+Of course, there are alternatives to Java's standard technique for serialization.  For instance, XStream gives a
+programmer the ability to write a heap-resident object to an XML file. In comparison to using binary serialization, what
+would be the benefits of storing objects in XML files using XStream? You can learn more about how XStream works by
+visiting this Web site: \url{http://xstream.codehaus.org/}. You can learn many of the basics about XStream by reading
+the tutorials that are available on the aforementioned Web site; the ``Two Minute Tutorial'' provides a simple
+introduction to the steps that you must take to serialize and deserialize a Java object. 
 
 \vspace*{-.05in}
 \section*{Using Binary and XML Serializers in Java}
