@@ -12,7 +12,7 @@
 \section*{Introduction}
 
 Chapter 23 of your textbook introduces the basics of the eXtensible markup language (XML), explaining how this
-semi-structured approach to data management has been the defacto way to exchange data. In this laboratory assignment,
+semi-structured approach to data management has become the defacto way to exchange data. In this laboratory assignment,
 you will explore some of the trade-offs associated with the use of XML, with a particular focus on the time and space
 overheads associated with storing data in this format. In particular, you will implement a benchmarking framework that
 can serialize a Java object to both the binary and XML formats.  Finally, you and your partner will write a 
@@ -52,8 +52,20 @@ However, the benchmarks should work correctly with a slightly older version of X
 if you are not able to compile and run this preliminary version of the benchmarks.
 
 \vspace*{-.05in}
-\section*{Implementing and Using  Data Serialization Benchmarks}
+\section*{Implementing and Using Data Serialization Benchmarks}
 
+The Java programming language provides a default serialization method for any Java class that ``{\tt implements
+  java.io.Serializable}''---it also requires the use of classes such as {\tt FileOutputStream} and {\tt
+  ObjectOutputStream}. Can you add a default serialization benchmark that will store and retrieve one of the randomly
+generated objects? How big are the files that this method creates?  You should also add an XStream-based benchmark that
+can store and retrieve the same objects. In comparison to the default serializer, how long does it take to produce the
+XML-based representation? How big are the XML files? What are the benefits of using XML for serialization?
+
+After finishing the implementation of your benchmarks, you are your partner should conduct experiments to compare and
+contrast the performance of the default and XML-based serialization and deserialization methods. Your experiments should
+vary the number and content (e.g., both character and numerical values) of tree nodes in the randomly generated object.
+You should also measure the time overhead associated with storing and retrieving the object and the space overhead
+of the serialized files. Finally, you must write a report that analyzes and explains your results.
 
 \section*{Summary of the Required Deliverables}
 
@@ -64,20 +76,18 @@ addition, this assignment invites your partnership to submit one printed version
 member should write and submit their own version of the first deliverable. Please see the instructor if you have
 questions about the deliverables that you must turn in for this assignment.
 
-% \vspace*{-.05in}
-
+\vspace*{-.05in}
 \begin{enumerate}
   \setlength{\itemsep}{0pt}
   \item A two paragraph commentary on the work that each team member completed. 
   \item A description of the eXtensible markup language and its features, strengths, and weaknesses.
-  \item An explanation of the binary serialization method provided by the Java language.
+  \item An explanation of the default serialization method provided by the Java language.
   \item The final version of the source code for your serialization benchmarking framework.
   \item Output from at least five runs of your benchmarks, demonstrating features and correctness.
   \item A detailed report addressing the performance trade-offs associated with serialization.
   \item A reflection on the challenges that you faced when completing this laboratory assignment.
 \end{enumerate}
-
-% \vspace*{-.1in} 
+\vspace*{-.05in}
 
 In adherence to the Honor Code, students should complete this assignment while exclusively collaborating with the
 other member of their team. While it is appropriate for students in this class---who are not in the same team---to have
