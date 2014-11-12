@@ -49,7 +49,22 @@ implementation? What is the output of this program? Does the program seem to wor
 \vspace*{-.05in}
 \section*{Using and Extending a Comprehensive XML Parser}
 
+After completing the previous phase of the laboratory assignment, you and your partner should again use GVim to study
+the contents of the provided ``{\tt nih-mesh.xml}'' file, available from
+\url{http://www.nlm.nih.gov/mesh/filelist.html}. As you will notice, this XML document is substantially more complex
+than the ``{\tt staff.xml}'' file that you previously parsed.  When you try to parse this new XML file using the ``{\tt
+  ReadXMLFileWithDOM.java}'' program, does it work correctly?
 
+The ``{\tt DOMEcho.java}'' program provides another, more comprehensive, approach to parsing an XML document. Please run
+this new parser on both of the XML files in the Git repository. What output does this program produce? Does it seem to
+work correctly? One of the downsides of the ``{\tt DOMEcho}'' program is that it always produces the debugging output
+that shows the details about each XML component---a feature that is not desirable if we want to benchmark the
+performance of DOM-based parsing. You and your partner should add a command-line argument that will turn off all of this
+program's debugging output, while still causing it to parse the entire XML document. Finally, you should add code that
+appropriately times the execution of the parser. After completing these implementation tasks, you should run the parser,
+when it is configured to not produce output, and record how long it takes to parse five different XML documents.
+Finally, you an your partner should provide XML and output snippets and write a report summarizing your empirical
+results.
 
 \section*{Summary of the Required Deliverables}
 
@@ -60,18 +75,19 @@ In addition, this assignment invites your partnership to submit one printed vers
 member should write and submit their own version of the first deliverable. Please see the instructor if you have
 questions about the deliverables that you must turn in for this laboratory assignment.
 
-\vspace*{-.05in}
+\vspace*{-.1in}
 \begin{enumerate}
   \setlength{\itemsep}{0pt}
   \item A two paragraph commentary on the work that each team member completed. 
   \item A description of DOM-based XML parsing, examining its features, strengths, and weaknesses.
   \item A discussion of how normalization can influence the output of a DOM-based XML parser.
   \item The final version of the {\tt staff.xml} XML file that you customized and extended as appropriate.
-  \item The output from running the {\tt ReadXMLFileWithDOM} program in the terminal window.
+  \item The output from running the {\tt ReadXMLFileWithDOM} program with both of the XML files.
+  \item The output from running the {\tt DOMEcho} program with both of the XML provided files.
+  \item Snippets of the five XML files and the output from running the enhanced {\tt DOMEcho} program.
   \item A report addressing the performance trends associated with DOM-based XML parsing.
-  \item A reflection on the challenges that you faced when completing this laboratory assignment.
 \end{enumerate}
-\vspace*{-.05in}
+\vspace*{-.1in}
 
 In adherence to the Honor Code, students should complete this assignment while exclusively collaborating with the
 other member of their team. While it is appropriate for students in this class---who are not in the same team---to have
