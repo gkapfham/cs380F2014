@@ -11,31 +11,20 @@
 
 \section*{Introduction}
 
-Sections 23.4 and 23.5 of your textbook explain the steps that a developer must take to query, transform, and parse
-eXtensible markup language (XML) documents. In this laboratory assignment, you will download and use two programs that
-use the tree-based document object model (DOM) to parse an XML document.  You will extend the second program so that it
-can produce output in a more configurable fashion.  Finally, you and your partner will conduct a simple experiment to
-measure the performance of DOM-based parsing and write a short report that describes and explains the empirical trends
-that you identified.
+Sections 23.4 and 23.5 of your textbook explain the steps that a software developer and/or a data analyst must take to
+query, transform, and parse eXtensible markup language (XML) documents. In this laboratory assignment, you will download
+and use two programs that leverage the tree-based document object model (DOM) to parse an XML document.  In addition,
+you will extend the second program so that it can produce output in a more configurable fashion.  Finally, you and your
+partner will conduct a simple experiment to measure the performance of DOM-based parsing and write a short report that
+describes and explains the empirical trends that you identified.
 
 \vspace*{-.05in}
-\section*{Learning About Serialization Methods}
+\section*{Learning About XML Parsing Methods}
 
-The Java programming language provides a default serialization method that transforms a Java object, resident in the
-heap of the Java virtual machine (JVM), into a format that can be saved to the disk. Why would it be useful to serialize
-a Java object? You can learn more about how Java performs serialization by studying the following Web site:
-\url{http://docs.oracle.com/javase/7/docs/technotes/guides/serialization/index.html}. After learning more about using
-this default approach to serialization, what do you think are the trade-offs associated with it?
 
-Of course, there are alternatives to Java's standard technique for serialization.  For instance, XStream gives a
-programmer the ability to write a heap-resident object to an XML file. In comparison to using default serialization, what
-would be the benefits of storing objects in XML files using XStream? You can learn more about how XStream works by
-visiting this Web site: \url{http://xstream.codehaus.org/}. You can learn many of the basics about XStream by reading
-the tutorials that are available on the aforementioned Web site; the ``Two Minute Tutorial'' provides a simple
-introduction to the steps that you must take to serialize and deserialize a Java object. 
 
 \vspace*{-.05in}
-\section*{Using the Default and XML-Based Serializers in Java}
+\section*{Simple DOM-Based Parsing of XML}
 
 You and your partner should create a Git repository, using Bitbucket, that you can use to complete this laboratory
 assignment.  To start off this project, one of you should go into the ``share'' repository for this course and run the
@@ -45,47 +34,30 @@ Please note that the provided version of the benchmark does not yet include the 
 performance of default and XML serialization---you and your partner will add this code as part of the laboratory
 assignment.
 
-Make sure that both team members are able to compile and run the current version of the ``{\tt
-  StorageAndRetrievalBenchmark.java}'' program. What output does it produce right now? What is the meaning of this
-output? You should note that the provide Java archive (JAR) files are older versions of XStream; interested students may
-investigate the downloading and installation of the version of this library that was released in February of 2014.
-However, the benchmarks should work correctly with a slightly older version of XStream. Please see the course instructor
-if you are not able to compile and run this preliminary version of the benchmarks.
 
 \vspace*{-.05in}
-\section*{Implementing and Using Data Serialization Benchmarks}
+\section*{Using and Extending a Comprehensive XML Parser}
 
-The Java programming language provides a default serialization method for any Java class that ``{\tt implements
-  java.io.Serializable}''---it also requires the use of classes such as {\tt FileOutputStream} and {\tt
-  ObjectOutputStream}. Can you add a default serialization benchmark that will store and retrieve one of the randomly
-generated objects? How big are the files that this method creates?  You should also add an XStream-based benchmark that
-can store and retrieve the same objects. In comparison to the default serializer, how long does it take to produce the
-XML-based representation? How big are the XML files? What are the benefits of using XML for serialization?
 
-After finishing the implementation of your benchmarks, you and your partner should conduct experiments to compare and
-contrast the performance of the default and XML-based serialization and deserialization methods. Your experiments should
-vary the number and content (e.g., both character and numerical values) of tree nodes in the randomly generated object.
-You should also measure the time overhead associated with storing and retrieving the object and the space overhead
-of the serialized files. Finally, you must write a report that analyzes and explains your results.
 
 \section*{Summary of the Required Deliverables}
 
 You and your partner should always use a Git repository, hosted by Bitbucket, to store the source code, XML files,
-benchmark output, and all of the other deliverables required by this assignment. The repository must be shared with the
+program output, and all of the other deliverables required by this assignment. The repository must be shared with the
 course instructor and the version control log should accurately reflect each student's contribution to the assignment.
 In addition, this assignment invites your partnership to submit one printed version of the following deliverables; each
 member should write and submit their own version of the first deliverable. Please see the instructor if you have
-questions about the deliverables that you must turn in for this assignment.
+questions about the deliverables that you must turn in for this laboratory assignment.
 
 \vspace*{-.05in}
 \begin{enumerate}
   \setlength{\itemsep}{0pt}
   \item A two paragraph commentary on the work that each team member completed. 
-  \item A description of the eXtensible markup language and its features, strengths, and weaknesses.
-  \item An explanation of the default serialization method provided by the Java language.
-  \item The final version of the source code for your serialization benchmarking framework.
-  \item Output from at least five runs of your benchmarks, demonstrating features and correctness.
-  \item A detailed report addressing the performance trade-offs associated with serialization.
+  \item A description of DOM-based XML parsing, examining its features, strengths, and weaknesses.
+  \item 
+  \item 
+  \item Output from at least five runs of 
+  \item A detailed report addressing the performance trends associated with DOM-based XML parsing.
   \item A reflection on the challenges that you faced when completing this laboratory assignment.
 \end{enumerate}
 \vspace*{-.05in}
