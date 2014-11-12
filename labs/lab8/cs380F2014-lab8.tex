@@ -6,7 +6,7 @@
 \usepackage[compact]{titlesec}
 
 \begin{document}
-\MYTITLE{Laboratory Assignment Eight \\ Parsing XML Files Using the Document Object Model}
+\MYTITLE{Laboratory Assignment Eight \\ Using the Document Object Model to Parse XML Files}
 \MYHEADERS{Laboratory Assignment Eight}{Due: November 19, 2014}
 
 \section*{Introduction}
@@ -21,7 +21,7 @@ describes and explains the empirical trends that you identified.
 \vspace*{-.05in}
 \section*{Learning More About XML Parsing Methods}
 
-In addition to review the aforementioned sections of your textbook---and any of relevant content in Chapter 23---you
+In addition to reviewing the aforementioned sections of your textbook---and any of relevant content in Chapter 23---you
 should study the following Web site: \url{http://www.mkyong.com/java/how-to-read-xml-file-in-java-dom-parser/}. We will
 use the simple example provided in this tutorial to start learning about how to parse an XML document.  You should also
 carefully review Oracle's tutorial, called ``Reading XML Data into a DOM'', which is available from
@@ -34,17 +34,17 @@ using our chosen DOM parser, you should also read \url{https://docs.oracle.com/j
 
 You and your partner should create a Git repository, using Bitbucket, that you can use to complete this laboratory
 assignment.  To start off this project, one of you should go into the ``share'' repository for this course and run the
-``{\tt git pull}'' command. After investigating the directories for this assignment, you will find the ``{\tt
+``{\tt git pull}'' command. After investigating the directories for this course, you will find the ``{\tt
   lab8/}'' directory. What files does this directory contain?  Please see the course instructor if your repository does
 not have two XML files and two Java programs.
 
-You are your partner should used a text editor, like GVim, to view the file called ``{\tt staff.xml}''.  What are the
-contents of this file?  Next, you should use GVim to customize the contents of this file so that they correspond to
-staff members at Allegheny College---you can take a guess for any attributes of a staff member that you do not know.  In
-addition, you are welcome to add in additional data and meta-data as long as it adheres to the standard set forth in the
-original version of ``{\tt staff.xml}''. Now, you should compile and run the program called ``{\tt
-  ReadXMLFileWithDOM.java}'' How does this program work? What are the limitations associated with this program's
-implementation? What is the output of this program? Does the program seem to work correctly?
+You are your partner should use a text editor, like GVim, to view the file called ``{\tt staff.xml}''.  What are the
+contents of this file?  Next, you should use GVim to customize the contents of this file so that they describe staff
+members at Allegheny College---you can take a guess for any attributes of a staff member that you do not know.  In
+addition, you are encouraged to add in additional data and meta-data as long as it adheres to the standard set forth in
+the original version of ``{\tt staff.xml}''. Now, you should compile and run the program called ``{\tt
+  ReadXMLFileWithDOM.java}''. How does this program work? What is the output of this program? Does the program seem to
+work correctly? What are the limitations associated with this program's implementation? 
 
 \vspace*{-.05in}
 \section*{Using and Extending a Comprehensive XML Parser}
@@ -60,10 +60,10 @@ this new parser on both of the XML files in the Git repository. What output does
 work correctly? One of the downsides of the ``{\tt DOMEcho}'' program is that it always produces the debugging output
 that shows the details about each XML component---a feature that is not desirable if we want to benchmark the
 performance of DOM-based parsing. You and your partner should add a command-line argument that will turn off all of this
-program's debugging output, while still causing it to parse the entire XML document. Finally, you should add code that
-appropriately times the execution of the parser. After completing these implementation tasks, you should run the parser,
-when it is configured to not produce output, and record how long it takes to parse five different XML documents.
-Finally, you an your partner should provide XML and output snippets and write a report summarizing your empirical
+program's debugging output, while ensuring that it still parses the entire XML document. Next, you should add code
+that appropriately times the execution of the parser. After completing these implementation tasks, you should run the
+parser, when it is configured to not produce output, and record how long it takes to parse five different XML documents.
+Finally, you and your partner should provide XML and output snippets and write a report summarizing your empirical
 results.
 
 \section*{Summary of the Required Deliverables}
@@ -73,7 +73,7 @@ program output, and all of the other deliverables required by this assignment. T
 course instructor and the version control log should accurately reflect each student's contribution to the assignment.
 In addition, this assignment invites your partnership to submit one printed version of the following deliverables; each
 member should write and submit their own version of the first deliverable. Please see the instructor if you have
-questions about the deliverables that you must turn in for this laboratory assignment.
+any questions about the deliverables that you must turn in for this laboratory assignment.
 
 \vspace*{-.1in}
 \begin{enumerate}
@@ -83,9 +83,9 @@ questions about the deliverables that you must turn in for this laboratory assig
   \item A discussion of how normalization can influence the output of a DOM-based XML parser.
   \item The final version of the {\tt staff.xml} XML file that you customized and extended as appropriate.
   \item The output from running the {\tt ReadXMLFileWithDOM} program with both of the XML files.
-  \item The output from running the {\tt DOMEcho} program with both of the XML provided files.
+  \item The output from running the {\tt DOMEcho} program with both of the provided XML files.
   \item Snippets of the five XML files and the output from running the enhanced {\tt DOMEcho} program.
-  \item A report addressing the performance trends associated with DOM-based XML parsing.
+  \item A report explaining the performance trends associated with DOM-based XML parsing.
 \end{enumerate}
 \vspace*{-.1in}
 
