@@ -40,9 +40,25 @@ project that you propose.
     may also implement their own performance benchmarks for relational databases.  The benchmarks and
     the empirical study should, if possible, consider both the time and space overhead of the database.
 
+  \item {\bf Exploring Relational Database Internals}: Implement and test one or more of the key data structures or
+    components within a relational database.  For example, you might implement the B+ tree that is described in your
+    textbook, write a JUnit test suite for the B+ tree, and building a simple benchmarking framework to measure the
+    performance of your tree under a variety of workloads.  Alternatively, you may use OpenGL, or other suitable
+    technologies, to visualize the behavior of the B+ tree insertion and deletion algorithms.
 
+  \item {\bf Implementing and Testing Database-Centric Applications}: Use the standard Java database connectivity (JDBC)
+    interface to interact with a relational database.  You should implement one or more substantial applications and
+    test suites.  Students may consider using the DBUnit testing framework when they are testing their applications.
+    The final report about your database application should include visualizations of the schemas and clear
+    documentation that explains how the program interacts with the database.  Students who select this project are
+    encouraged to release their system as a free and open source program.  
 
-
+  \item {\bf Empirical Evaluation of the Java String Analyzer}: Many database-centric applications submit strings to the
+    relational database management system via JDBC.  Use the Java String Analyzer (JSA) to build finite state machines
+    (FSMs) of the full range of strings that can flow to a specific database interaction point.  Students who pick this
+    project will install JSA and then use it to conduct experiments to characterize the size and structure of the finite
+    state machines the tool produces.  As part of this project, you will be required to download and install Java
+    database applications that use both strings and JDBC.  
 
 
 
