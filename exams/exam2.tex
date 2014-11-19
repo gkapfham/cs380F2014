@@ -87,13 +87,17 @@
           %%   figure in order to reveal the execution location of each
           %%   scripting language.
 
-          \item ({\bf 4 Points}) What is a Java Database Connectivity (JDBC) driver connection pool?  Your response
-            should explain why connection pooling is valuable and discuss the performance trade-offs associated with the
-            use of pools.
+          % \item ({\bf 4 Points}) What is a Java Database Connectivity (JDBC) driver connection pool?  Your response
+          %   should explain why connection pooling is valuable and discuss the performance trade-offs associated with the
+          %   use of pools.
+
+          \item ({\bf 4 Points}) Draw a diagram that fully explains how a program might adhere to the {\em dynamic SQL}
+            approach by using a Java Database Connectivity (JDBC) driver to communicate with a database.  Your response
+            to this question should also explain the strengths and weaknesses of this implementation strategy.
 
           \item ({\bf 2 Points}) Web-based languages are often designed to execute on the side of either the Web client
             or the Web server. After drawing a diagram that shows communication between a client and a server, please
-            include labels to indicate one example each of a language that runs on the client and the server.
+            add descriptive names to indicate one example each of a language that runs on the client and the server.
 
             %% \item ({\bf 4 Points}) What is a database trigger?  Please
             %%   describe a single circumstance in which it would be valuable to
@@ -215,7 +219,6 @@
               \begin{figure}[hp]
                 \centering
                 \normalsize
-                %\setlength{\extrarowheight}{-0.5pt}
                 \begin{tabular}{l}
                   \texttt{CREATE TABLE Flights(}                                        \\
                   \texttt{~~FLIGHT\_ID~~~~~~~~CHAR(6)~\textbf{NOT NULL},}               \\
@@ -274,8 +277,8 @@
                     authentication and authorization. What is the meaning of each of these \mbox{two terms}?
 
                   \item ({\bf 2 Points}) The Java programming language supports the serialization of objects using
-                    either a binary or XML-based storage mechanism. After explaining how these two methods work, please
-                    state which one is more secure and explain why.
+                    either a binary or an XML-based storage mechanism. After explaining how these two methods work, please
+                    state which one is more secure and state why.
                     \end{enumerate}
 
                 \end{enumerate}
