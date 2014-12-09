@@ -282,6 +282,52 @@ if( window.location.search.match( /print-pdf/gi ) ) {
                     <p class="fragment">Does it support your intuitive prediction?</p>
                     <p class="fragment">Can you make any additional predictions?</p>
                 </section>
+
+                <section>
+                    <h1 id="training">Rpart Training</h1>
+                    <p class="fragment"><code>rp <- as.party(rpart(choice~., data=BBBClub, minbucket=10))</code></p>
+                    <p class="fragment"><code>rpTwo <- as.party(rpart(choice~., data=BBBClub, minbucket=10, maxdepth=2))</code></p>
+                    <p class="fragment">Let's review the components of this command</p>
+                    <p class="fragment">Okay, now we need to train with two other methods!</p>
+                </section>
+
+                <section>
+                    <h1 id="training">Ctree Training</h1>
+                    <p class="fragment"><code>ct <- ctree(choice~., data=BBBClub, minbucket=10, mincrit=0.99)</code></p>
+                    <p class="fragment"><code>ctTwo <- ctree(choice~., data=BBBClub, minbucket=10, mincrit=0.99, maxdepth=2)</code></p>
+                    <p class="fragment">You can learn more about these methods by typing <code>?rpart</code> and <code>?ctree</code></p>
+                    <p class="fragment">Any questions so far?</p>
+                </section>
+
+                <section>
+                    <h1 id="training">Evtree Training</h1>
+                    <p class="fragment"><code>ev <- evtree(choice~., data=BBBClub, minbucket=10, maxdepth=2)</code></p>
+                    <p class="fragment">Can you compare the execution times?</p>
+                    <p class="fragment">Differences between global and local search methods</p>
+                    <p class="fragment">Consider running this command to make multiple trees!</p>
+                    <p class="fragment">Are the trees any different?</p>
+                </section>
+
+                <section>
+                    <h1 id="visualization">Visualization</h1>
+                    <p class="fragment"><code>X11(height=6, width=8)</code></p>
+                    <p class="fragment"><code>plot(ev)</code></p>
+                    <p class="fragment">Create a visualization for each of the trees</p>
+                    <p class="fragment">Make sure that you have a separate X11 window!</p>
+                </section>
+
+                <section>
+                    <h1 id="compare_and_contrast">Compare and Contrast</h1>
+                </section>
+
+                <section>
+                    <h1 id="understanding_the_trees">Understanding the Trees</h1>
+                </section>
+
+                <section>
+                    <h1 id="making_predictions">Making Predictions</h1>
+                </section>
+
             </div>
 
         </div>
