@@ -259,6 +259,29 @@ if( window.location.search.match( /print-pdf/gi ) ) {
                     <p class="fragment">Are those predictions actually correct?</p>
                     <p class="fragment">Let's use machine learning to predict!</p>
                 </section>
+
+<!-- library("rpart") -->
+<!-- rp <- as.party(rpart(choice~., data=BBBClub, minbucket=10)) -->
+<!-- library("partykit") -->
+
+                <section>
+                    <h1 id="library_loading">Library Loading</h1>
+                    <p class="fragment"><code>library("rpart")</code></p>
+                    <p class="fragment"><code>library("partykit")</code></p>
+                    <p class="fragment"><code>library("evtree")</code></p>
+                    <p class="fragment">Running each command produces no output!</p>
+                    <p class="fragment">Ready to try the next step?</p>
+                </section>
+
+                <section>
+                    <h1 id="summarizing">Summarizing</h1>
+                    <p class="fragment"><code>summary(BBBClub)</code></p>
+                    <p class="fragment">How many attributes are there?</p>
+                    <p class="fragment">What are the attributes?</p>
+                    <p class="fragment">What trends do you find in the data set?</p>
+                    <p class="fragment">Does it support your intuitive prediction?</p>
+                    <p class="fragment">Can you make any additional predictions?</p>
+                </section>
             </div>
 
         </div>
