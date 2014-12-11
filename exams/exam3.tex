@@ -541,15 +541,32 @@ status updates.
     classification} or a {\em regression} framework.  Please define these two terms and give an example of two separate
     data mining problems that would respectively involve the completion of a regression or a classification task.
 
+  % \item ({\bf 4 Points}) Figure~\ref{fig:trees} gives an example of two regression trees that were constructed by the
+  %   {\em recursive partitioning} algorithm (the leaves of this tree correspond to values of the ``perf'' attribute).  As
+  %   part of your response to this question, you should explain how to interpret a tree of this nature and state two or
+  %   three interesting trends that are exposed by this tree model.  An inspection of the tree reveals that it does not
+  %   use all of the attributes -- can you suggest why this may be the case?
+
   \item ({\bf 4 Points}) Figure~\ref{fig:trees} gives an example of two regression trees that were constructed by the
-    {\em recursive partitioning} algorithm (the leaves of this tree correspond to values of the ``perf'' attribute).  As
-    part of your response to this question, you should explain how to interpret a tree of this nature and state two or
-    three interesting trends that are exposed by this tree model.  An inspection of the tree reveals that it does not
-    use all of the attributes -- can you suggest why this may be the case?
+    {\em recursive partitioning} algorithm (the leaves of this tree correspond to values of the ``perf'' attribute).
+    Please answer the following questions about these trees.
+    
+    \begin{enumerate}
+    
+      \item An inspection of the trees reveals that they do not use all of the attributes described in
+        Figure~\ref{fig:meaning}---can you suggest why this may be the case?
+
+      \item The ``leaves'' of these trees contain graphs with annotations like ``Node 4 (n=143)''---what does this mean?
+        Why is this information important?
+
+      \item Do these trees represent the result of classification or regression? What characteristic(s) of the trees
+        suggest that your response is correct?
+
+    \end{enumerate}
 
   \item ({\bf 2 Points}) How would you use the regression tree in Figure~\ref{fig:trees} to perform prediction?  Your
-    response to this question should furnish a concrete example that explains how to predict with the tree that
-    describes CPU performance.
+    response to this question should furnish a concrete example that explains how to predict with on of the trees that
+    describe CPU performance.
 
 \end{enumerate}
 
