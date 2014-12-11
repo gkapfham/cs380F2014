@@ -532,28 +532,24 @@ status updates.
 \newpage
 
 \item ({\bf 10 Points}) Answer the following questions about the use of machine learning algorithms during the processes
-  of data mining and data warehousing.
+  of data mining and data warehousing. Your response to this question should be informed by the attribute definitions in
+  Figure~\ref{fig:meaning} and the tree models in Figure~\ref{fig:trees}.
 
   \begin{enumerate}
 
   \item ({\bf 4 Points}) Machine learning algorithms generally focus on prediction tasks in either a {\em
     classification} or a {\em regression} framework.  Please define these two terms and give an example of two separate
-    data mining problems that would respectively involve a regression or a classification.
+    data mining problems that would respectively involve the completion of a regression or a classification task.
 
-  \item ({\bf 4 Points}) Figure~\ref{figure:tree} gives an example of
-    a regression tree that was constructed by the {\em recursive
-      partitioning} algorithm (the leaves of this tree correspond to
-    values of the ``perf'' attribute).  As part of your response to
-    this question, you should explain how to interpret a tree of this
-    nature and state two or three interesting trends that are exposed
-    by this tree model.  An inspection of the tree reveals that it
-    does not use all of the attributes -- can you suggest why this may
-    be the case?
+  \item ({\bf 4 Points}) Figure~\ref{fig:trees} gives an example of two regression trees that were constructed by the
+    {\em recursive partitioning} algorithm (the leaves of this tree correspond to values of the ``perf'' attribute).  As
+    part of your response to this question, you should explain how to interpret a tree of this nature and state two or
+    three interesting trends that are exposed by this tree model.  An inspection of the tree reveals that it does not
+    use all of the attributes -- can you suggest why this may be the case?
 
-  \item ({\bf 2 Points}) How would you use the regression tree in
-    Figure~\ref{figure:tree} to perform prediction?  Your response to
-    this question should furnish a concrete example that explains how
-    to predict with the tree that describes CPU performance.
+  \item ({\bf 2 Points}) How would you use the regression tree in Figure~\ref{fig:trees} to perform prediction?  Your
+    response to this question should furnish a concrete example that explains how to predict with the tree that
+    describes CPU performance.
 
 \end{enumerate}
 
@@ -581,6 +577,7 @@ status updates.
 
   \end{tabular} 
   \caption{The Meaning of the Attributes in the Dataset on CPU Performance.}
+  \label{fig:meaning}
 
 \end{figure}
 
@@ -655,7 +652,7 @@ status updates.
 \vspace*{-.25in}
 
 \caption{A Regression Tree that Models a Data Set About CPU Performance.}
-\label{figure:tree}
+\label{fig:trees}
 \vspace*{-.25in}
 \end{figure}
 
