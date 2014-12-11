@@ -532,8 +532,8 @@ status updates.
 \newpage
 
 \item ({\bf 10 Points}) Answer the following questions about the use of machine learning algorithms during the processes
-  of data mining and data warehousing. Your response to this question should be informed by the attribute definitions in
-  Figure~\ref{fig:meaning} and the tree models in Figure~\ref{fig:trees}.
+  of data mining. Your response to this question should be informed by the attribute definitions in
+  Figure~\ref{fig:meaning} and the trees in Figure~\ref{fig:trees}.
 
   \begin{enumerate}
 
@@ -554,7 +554,7 @@ status updates.
     \begin{enumerate}
     
       \item An inspection of the trees reveals that they do not use all of the attributes described in
-        Figure~\ref{fig:meaning}---can you suggest why this may be the case?
+        Figure~\ref{fig:meaning}---can you explain why this may be the case?
 
       \item The ``leaves'' of these trees contain graphs with annotations like ``Node 4 (n=143)''---what does this mean?
         Why is this information important?
@@ -571,36 +571,12 @@ status updates.
     response to this question should furnish a concrete example that explains how to predict with on of the trees that
     describe CPU performance.
 
+  \item ({\bf 2 Points}) There are algorithms that use either {\em global} or {\em local} search heuristics to construct
+    a classification and regression tree. What are the differences between these two methods? Which of the trees in
+    Figure~\ref{fig:trees} was produced by a global, evolutionary search method? What characteristic(s) suggest that
+    you are correct?
+
 \end{enumerate}
-
-\begin{figure}[h]
-
-  \centering
-
-  \begin{tabular}{c | c}
-
-    {\bf Variable} & {\bf Meaning} \\ \hline
-
-    syct & cycle time in nanoseconds \\ \hline
-
-    mmin & minimum main memory in kilobytes \\ \hline
-
-    mmax & maximum main memory in kilobytes \\ \hline
-
-    cach & cache size in kilobytes \\ \hline
-
-    chmin & minimum number of channels \\ \hline
-
-    chmax & maximum number of channels \\ \hline
-
-    perf & performance of 209 different CPUs
-
-  \end{tabular} 
-  \caption{The Meaning of the Attributes in the Dataset on CPU Performance.}
-  \label{fig:meaning}
-
-\end{figure}
-
 
 \end{enumerate}
 
@@ -653,6 +629,26 @@ status updates.
 \label{figure:xml}
 \end{figure}
 
+\begin{figure}[ph]
+
+  \centering
+
+  \begin{tabular}{c | c}
+
+    {\bf Variable} & {\bf Meaning} \\ \hline
+    syct & cycle time in nanoseconds \\ \hline
+    mmin & minimum main memory in kilobytes \\ \hline
+    mmax & maximum main memory in kilobytes \\ \hline
+    cach & cache size in kilobytes \\ \hline
+    chmin & minimum number of channels \\ \hline
+    chmax & maximum number of channels \\ \hline
+    perf & performance of 209 different CPUs
+
+  \end{tabular} 
+  \caption{The Meaning of the Attributes in the Dataset on CPU Performance.}
+  \label{fig:meaning}
+
+\end{figure}
 
 \begin{figure}[p]
 \centering
