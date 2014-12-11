@@ -133,12 +133,11 @@ status updates.
 %%   foreign key that references $R_i$.  What should the RDBMS do to
 %%   properly handle {\bf insert}s into relation $R_j$?
 
-\item ({\bf 3 Points}) The Java database connectivity (JDBC) interface
-  furnishes the ability to create and submit a {\em prepared
-    statement}.  Furthermore, JDBC also enables a program to execute a
-  SQL {\bf select} and receive a {\em result set}.  Using source code
-  statements when appropriate, define the terms prepared statement and
-  result set.
+\item ({\bf 3 Points}) The Java database connectivity (JDBC) interface furnishes the ability to create and submit a {\em
+  prepared statement}.  Furthermore, JDBC also enables a program to execute a string representation of a SQL {\bf
+  select} and receive a {\em result set}.  Using source code statements when appropriate, define the terms prepared
+  statement and result set. What are the security implications associated with using these two methods to interact with
+  a relational database?
 
 %% \item ({\bf 2 Points}) The relational algebra includes operations such
 %%   as $r \cup s$ and $r - s$.  However, these operations are defined
@@ -224,13 +223,10 @@ status updates.
       not have to provide the {\bf insert} statements that would
       perform the population).
 
-      Then, you must write an SQL {\bf update}, {\bf insert}, and {\bf
-        delete} statement and explain what each of these statements
-      are supposed to do.  These commands should be accompanied by the
-      before and after state of the relation.  Finally, please provide
-      a SQL {\bf select} query that uses one or more aggregate
-      functions and a {\bf where} clause.  You must produce the output
-      of the {\bf select} statement.
+      Then, you must write an SQL {\bf update}, {\bf insert}, and {\bf delete} statement and explain what each of these
+      statements are supposed to do.  These commands should be accompanied by the before and after state of the
+      relation.  Finally, please provide a SQL {\bf select} query that uses one or more aggregate functions and a {\bf
+      where} clause.  You must produce the output associated with running the {\bf select} statement.
 
     \end{enumerate}
 
@@ -309,7 +305,7 @@ status updates.
 
   \begin{enumerate}
     
-    \item ({\bf 2 Points}) What is an SQL injection attack? What steps
+    \item ({\bf 2 Points}) What is a SQL injection attack? What steps
       can a programmer take to prevent from taking place and/or
       mitigate the risk of this type of attack?
 
@@ -324,11 +320,9 @@ status updates.
     %%   performance trade-offs associated with using transactions and a
     %%   {\em transaction manager} in a database-centric application?
 
-    \item ({\bf 2 Points}) Many tables in a relational database have a
-      primary key.  When you create a relational database, you have to
-      consider the efficiency of the data type for the primary key.
-      For both of the following examples, you should explain which
-      data type would support more efficient queries.  You must
+    \item ({\bf 2 Points}) Many tables in a relational database have a primary key.  When you create a relational
+      database, you have to consider the efficiency of the data type for the primary key.  For both of the following
+      examples, you should explain which data type would support the most efficient execution of queries.  You must
       carefully justify your response to each part of this question.
 
       \begin{enumerate}
@@ -339,13 +333,11 @@ status updates.
 
       \end{enumerate}
 
-    \item ({\bf 3 Points}) Ehcache is a widely used distributed cache
-      for general purpose caching in the Java programming language.
-      Please clearly explain how you could use Ehcache to improve the
-      performance of a Web-based database application.  Your response
-      to this question should include one or more architecture
-      diagrams that clearly show the location of the instance of the
-      Ehcache.
+    \item ({\bf 3 Points}) Ehcache is a widely-used distributed cache for general-purpose caching in the Java
+      programming language.  Please clearly explain how you could use Ehcache to improve the performance of a Web-based
+      database application implemented in Java.  Your response to this question should include one or more architecture
+      diagrams that clearly show the location of the instance of the Ehcache. What are the efficiency trade-offs
+      associated with using a cache?
 
     \end{enumerate}
 
