@@ -1,0 +1,668 @@
+\documentclass[12pt]{article}             
+\textwidth = 6.5in
+\textheight = 9.05in
+\topmargin 0.0in
+\oddsidemargin 0.0in
+\evensidemargin 0.0in
+
+% set it so that subsubsections have numbers and they
+% are displayed in the TOC (maybe hard to read, might want to disable)
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+\usepackage{epsfig}
+
+% define widow protection 
+        
+\def\widow#1{\vskip #1\vbadness10000\penalty-200\vskip-#1}
+
+% define a little section heading that doesn't go with any number
+
+\def\littlesection#1{
+\widow{2cm}
+\vskip 0.5cm
+\noindent{\bf #1}
+\vskip 0.1cm
+\noindent
+}
+
+% A paraphrase mode that makes it easy to see the stuff that shouldn't
+% stay in for the final proposal
+
+\newdimen\tmpdim
+\long\def\paraphrase#1{{\parskip=0pt\hfil\break
+\tmpdim=\hsize\advance\tmpdim by -15pt\noindent%
+\hbox to \hsize
+{\vrule\hskip 3pt\vrule\hfil\hbox to \tmpdim{\vbox{\hsize=\tmpdim
+\def\par{\leavevmode\endgraf}
+\obeyspaces \obeylines 
+\let\par=\endgraf
+\bf #1}}}}}
+
+\renewcommand{\baselinestretch}{1.2}    % must go before the begin of doc
+
+% go with the way that CC sets the margins
+
+\vspace*{-1in}
+
+\begin{document}
+
+% handle widows appropriately
+\def\widow#1{\vskip #1\vbadness10000\penalty-200\vskip-#1}
+
+\begin{center}
+
+CS 380: Principles of Database Systems \\
+Examination 3 \\
+%Tuesday, April 17, 2007 \\
+
+\end{center}
+
+\noindent
+Answer the following ten examination questions.  You must provide
+answers to these questions on a separate sheet of paper.  Please
+develop responses that clearly express your ideas in the most succinct
+manner possible.  You are not permitted to complete this examination
+in conjunction with any of your classmates.  Furthermore, you cannot
+consult any outside references during this examination.  If you have
+questions concerning the problems that are listed below, please visit
+my office during the examination period.  If you leave the classroom
+to take the exam, you are responsible for checking the white board for
+status updates.
+
+%% , {\bf Score:}
+%%   \underline{\hspace*{.2in}} \hspace*{.05in}) 
+
+\begin{enumerate}
+
+\item ({\bf 10 Points}) Data management is an important issue within
+  the discipline of computer science.  Answer the following questions
+  about the fundamentals of data management.
+
+\begin{enumerate}
+
+\item ({\bf 3 Points}) One approach to managing data is to simply
+  place everything in files and construct a {\em file processing
+    system}.  List at least three disadvantages of this scheme.  Your
+  response should clearly explain each disadvantage.
+
+\item ({\bf 2 Points}) The structured query language (SQL) contains a
+  DML and a DDL.  What do these two terms mean?  Your response should
+  include an example of both a DML and a DDL statement.
+
+\item ({\bf 2 Points}) It is possible to find data in either a {\em
+  declarative} or an {\em imperative} fashion.  Please clearly define
+  each of these terms and give an example of both approaches in the
+  context of either a Java virtual machine (JVM) heap or an eXtensible
+  markup language (XML) document.
+
+%% \item ({\bf 3 Points}) What is {\em meta-data}?  How does the Java
+%%   Database Connectivity (JDBC) interface support the collection of
+%%   meta-data?  How does a relational database management system (RDBMS)
+%%   handle meta-data?  What type of meta-data does an RDBMS collect?
+
+\item ({\bf 3 Points}) What is {\em meta-data}?  How does the Java
+  Database Connectivity (JDBC) interface allow a programmer to access
+  various types of meta-data? Where does a relational database
+  management system (RDBMS) store meta-data?  What type of meta-data
+  does an RDBMS collect?
+
+\end{enumerate}
+
+\newpage
+
+\item ({\bf 10 Points}) A relational database management system
+  (RDBMS) can be used to store data.  A relational database schema can
+  contain keys.  Moreover, there any many different drivers that allow
+  standard programs to interact with an RDBMS.  Answer the following
+  questions about the RDBMS and the use of keys and drivers.
+
+\begin{enumerate}
+
+\item ({\bf 4 Points}) Define the following terms: {\em record}, {\em
+  attribute}, {\em attribute value}, and {\em attribute domain}.
+  Using meaningful labels, your definitions should reference a single
+  picture that further explains all of these four terms.
+
+\item ({\bf 3 Points}) Provide formal definitions of the terms {\em
+  super key}, {\em candidate key}, and {\em primary key}.  Your
+  response to this part of the question should include one or more
+  graphical examples to fully illustrate the formal definitions.
+
+%% \item ({\bf 3 Points}) Provide {\bf create table} statements that
+%%   define two relations.  You should define these relations so that
+%%   $R_i$ is referenced by $R_j$.  This means that $R_j$ must have a
+%%   foreign key that references $R_i$.  What should the RDBMS do to
+%%   properly handle {\bf insert}s into relation $R_j$?
+
+\item ({\bf 3 Points}) The Java database connectivity (JDBC) interface
+  furnishes the ability to create and submit a {\em prepared
+    statement}.  Furthermore, JDBC also enables a program to execute a
+  SQL {\bf select} and receive a {\em result set}.  Using source code
+  statements when appropriate, define the terms prepared statement and
+  result set.
+
+%% \item ({\bf 2 Points}) The relational algebra includes operations such
+%%   as $r \cup s$ and $r - s$.  However, these operations are defined
+%%   under the assumption that relations $r$ and $s$ are {\em
+%%     compatible}.  What conditions must hold if two relations are
+%%   compatible?
+
+\end{enumerate}
+
+\newpage
+
+\item ({\bf 10 Points}) It is important to properly design and
+  implement a database-centric application.  Answer the following
+  questions about application design and development.
+
+  \begin{enumerate}
+    
+    \item ({\bf 2 Points}) What are the similarities and differences
+      between a three-layer Web architecture and a two-layer
+      architecture?  Your response to this question should include a
+      picture of each type of architecture.
+
+%%     \item ({\bf 3 Points}) What is a JDBC connection pool?  Your
+%%       response should explain why connection pooling is valuable 
+%%       and discuss the performance trade-offs associated with the 
+%%       use of pools.
+
+%%     \item ({\bf 2 Points}) Suppose that you are writing a Java program
+%%       that uses JDBC to connect to an HSQLDB relational database.
+%%       Using Java-based psuedo code when appropriate, describe the
+%%       steps that occur when you execute the command {\tt java
+%%         org.hsqldb.sample.FindFile <name>} (we assume that {\tt
+%%         <name>} stands for the signature of a file in your home
+%%       account).
+
+    \item ({\bf 3 Points}) What is a database trigger?  Please
+      describe a single circumstance in which it would be valuable to
+      use triggers.  Finally, you should identify a situation in which
+      it would {\em not} be appropriate to use triggers.  As part of
+      your answer, you must carefully explain {\em why} it would or
+      would not be wise to use triggers.  Whenever possible, your
+      response should include diagrams and/or concrete examples.
+
+    %% \item ({\bf 3 Points}) The structured query language provides both
+    %%   the {\tt array} and the {\tt multiset} data types.  What are the
+    %%   similarities and differences between these two types?  Your
+    %%   response should contain an example of a variable that could be
+    %%   properly represented by each of these data types.
+
+    \item ({\bf 3 Points}) What is a {\em transaction}?  Why does a
+      relational database support transactions?  What approach should
+      an RDBMS take to manage the {\em integrity constraints} during
+      the execution of a transaction?  Your answer to this question
+      should clearly explain the trade-offs associated with your
+      chosen approach to constraint management during transaction
+      processing.
+
+    \item ({\bf 2 Points}) The transaction manager for a relational
+      database management system normally aims to enforce the {\em
+        ACID properties}.  What are these properties?
+
+    \end{enumerate}
+      
+\newpage
+
+\item ({\bf 10 Points}) The structured query language (SQL) is
+  regularly used in data management situations.  Answer the following
+  questions about SQL.
+
+  \begin{enumerate}
+    
+    \item ({\bf 2 Points}) Suppose that you used the {\bf create
+      table} statement to create a relation $rel_j$ that contains
+      attributes $A$, $B$, and $C$.  What SQL statement would you
+      execute if you wanted to add another attribute $D$ to this
+      relation?  What SQL statement would you run if you needed to
+      remove $rel_j$'s attribute $A$?
+
+    \item ({\bf 8 Points)} Propose your own (simple) relation by
+      providing a {\bf create table} statement to construct this
+      relation.  Next, you should provide a sample instance of your
+      schema by populating it with data and giving a diagram (you do
+      not have to provide the {\bf insert} statements that would
+      perform the population).
+
+      Then, you must write an SQL {\bf update}, {\bf insert}, and {\bf
+        delete} statement and explain what each of these statements
+      are supposed to do.  These commands should be accompanied by the
+      before and after state of the relation.  Finally, please provide
+      a SQL {\bf select} query that uses one or more aggregate
+      functions and a {\bf where} clause.  You must produce the output
+      of the {\bf select} statement.
+
+    \end{enumerate}
+
+\newpage
+
+\item ({\bf 10 Points}) There are several techniques that may be used
+  to implement database applications.  Answer the following questions
+  that are related to application development and data management in
+  the context of relational databases.
+
+  \begin{enumerate}
+
+    %% \item ({\bf 5 Points}) What is the difference between a {\em
+    %%   static} Web site and a {\em dynamic} Web site?  How do databases
+    %%   support the implementation of one (or both) of these types of
+    %%   sites?  As a Web developer, what are the trade-offs that you
+    %%   would evaluate when deciding whether to implement your next Web
+    %%   site in a static or dynamic fashion?  Your response should
+    %%   include an example of both types of Web site.
+
+  \item ({\bf 2 Points}) What is the difference between executing the
+    following two structured query language statements?  Your response
+    to this question should focus on how these two statements will
+    modify the state and structure of a relational database containing
+    the relation $R_i$.  Finally, you should classify the statement as
+    being a part of either the data definition or the data
+    manipulation language.
+
+    \begin{enumerate}
+
+    \item {\bf drop table} $R_i$
+
+    \item {\bf delete from} $R_i$
+
+    \end{enumerate}
+
+  \item ({\bf 3 Points}) What is a relational {\em view}?  Your
+    response should explain why views are created.  What are the
+    difficulties that are often associated with supporting direct
+    modification to a view?  In particular, your response should
+    clearly explain the challenges that are associated with handling
+    the {\em view update} problem.
+    
+%%     \item ({\bf 2 Points}) What is the difference between a {\em
+%%       static} Web site and a {\em dynamic} Web site?  How do databases
+%%       support the implementation of one (or both) of these types of
+%%       sites?
+
+    %% \item ({\bf 3 Points)} What is a {\em stored procedure}?  Where is
+    %%   a stored procedure located?  What are the benefits associated
+    %%   with using a stored procedure?
+
+%%     \item ({\bf 5 Points}) Suppose that you are performing load
+%%       testing for a database-driven Web site.  How will {\em
+%%         throughput} and {\em response time} change as you increase the
+%%       number of clients that are concurrently using the Web site?
+%%       What can you do to improve the performance of a database-driven
+%%       Web site?
+
+    \item ({\bf 5 Points}) Suppose that you are performing load
+      testing for a database-driven Web site.  How will {\em
+        throughput} and {\em response time} change as you increase the
+      number of clients that are concurrently using the Web site?
+      What can you do to improve the performance of a database-driven
+      Web site?  Your answer to this question should include a graph
+      that plots the relationship between throughput and response time
+      as the number of concurrent clients increases.
+
+    \end{enumerate}
+
+\newpage
+
+\item ({\bf 10 Points}) You must consider security and performance
+  when you are using a data management system.  Answer the following
+  questions about these important areas.
+
+  \begin{enumerate}
+    
+    \item ({\bf 2 Points}) What is an SQL injection attack? What steps
+      can a programmer take to prevent from taking place and/or
+      mitigate the risk of this type of attack?
+
+    \item ({\bf 3 Points}) What is {\em authentication}?  {\em
+      Authorization}?  How does the structured query language support
+      these two types of security features?
+
+    %% \item ({\bf 4 Points}) What are the three {\em canonical
+    %%   concurrency control} problems?  Your response should select one
+    %%   of these problems and provide a transaction schedule that
+    %%   clearly demonstrates how the problem could occur.  What are the
+    %%   performance trade-offs associated with using transactions and a
+    %%   {\em transaction manager} in a database-centric application?
+
+    \item ({\bf 2 Points}) Many tables in a relational database have a
+      primary key.  When you create a relational database, you have to
+      consider the efficiency of the data type for the primary key.
+      For both of the following examples, you should explain which
+      data type would support more efficient queries.  You must
+      carefully justify your response to each part of this question.
+
+      \begin{enumerate}
+
+      \item {\tt varchar(10)} versus {\tt varchar(100)}
+
+      \item {\tt int} versus {\tt real}
+
+      \end{enumerate}
+
+    \item ({\bf 3 Points}) Ehcache is a widely used distributed cache
+      for general purpose caching in the Java programming language.
+      Please clearly explain how you could use Ehcache to improve the
+      performance of a Web-based database application.  Your response
+      to this question should include one or more architecture
+      diagrams that clearly show the location of the instance of the
+      Ehcache.
+
+    \end{enumerate}
+
+\newpage
+
+%% \item ({\bf 10 Points}) Answer the following questions about how
+%%   database applications process large data sets and use transactions
+%%   to manage concurrent executions.
+
+%% \begin{enumerate}
+
+%% \item ({\bf 7 Points}) We can define the {\em good time} of a
+%%   distributed data processing system using Equation~(\ref{goodput}).
+%%   Furthermore, we can define the {\em allocation efficiency} of a
+%%   distributed data processor's handling of a specific workload using
+%%   Equation~(\ref{eff}).
+
+%%     \begin{equation}
+%%       time_{good} = time_{compute} - time_{checkpoint} - 
+%%       time_{roll back} \label{goodput}
+%%     \end{equation} 
+
+%%     \begin{equation}
+%%       Allocation \; \mbox{{\em efficiency}} = \frac{time_{good}}{time_{{compute}}} 
+%%       \label{eff}
+%%     \end{equation}
+    
+%%     In this question, you may assume that the placement time for a
+%%     distributed data processor is negligible and processor pre-emption
+%%     never occurs.  After placement, a processor can always execute for
+%%     $60$ minutes of total computation time.  Since it is possible for
+%%     a data processor to crash, we assume that checkpoints will save
+%%     the state of the computation.  Each time the data processor
+%%     checkpoints, it requires $2$ minutes of checkpoint time.  %\newline
+
+%%     If a data processor crashes and rollback is required, then this
+%%     will take a total of $20$ minutes.  If there is one checkpoint,
+%%     then a rollback occurs with a $45\%$ probability.  When there are
+%%     two checkpoints, the chance of a rollback is $30\%$.  Finally,
+%%     when a maximum of three checkpoints occur, the chance of rollback
+%%     is $25\%$. %\newline
+
+%%     Given the previous information, which checkpointing frequency is
+%%     best able to maximize allocation efficiency for the distributed
+%%     data processor?  In order to receive full credit, you must show
+%%     all of the work that enabled you to arrive at your final answer.
+%%     No prior knowledge of distributed data processing is required in
+%%     order to correctly answer this question.
+
+%%   \item ({\bf 3 Points}) A transaction manager that uses locking might
+%%     enter into deadlock.  A {\em wait for graph} (WFG) represents the
+%%     dependencies between the transactions in a database system so that
+%%     $T_i \rightarrow T_j$ means that transaction $T_i$ ``waits for''
+%%     $T_j$.  Is the database system in Figure~\ref{figure:wfg} in
+%%     deadlock?  If your response is {\em yes}, then please state how
+%%     you would resolve the deadlock.  If you response is {\em no}, then
+%%     indicate what edge(s) would need to be added in order to cause the
+%%     system to go into deadlock.  Your response should present a
+%%     general algorithm for detecting whether or not a transaction
+%%     processor system, represented by a WFG, is or is not in deadlock.
+
+%%   \end{enumerate}
+ 
+\newpage
+
+\item ({\bf 10 Points}) The eXtensible Markup Language (XML) can be
+  used to store semi-structured data.  Answer the following questions
+  about XML.
+
+  \begin{enumerate}
+    
+    \item ({\bf 4 Points}) XQuery is often described as being the
+      ``standard'' query language for XML.  What are the FLWOR
+      expressions that you can write in XQuery?
+
+      \item ({\bf 3 Points}) What is DOM?  What is SAX?  How are these
+      two technologies similar to and different from each other?  Your
+      response should contain a detailed analysis of the trade-offs 
+      associated with using these different APIs.
+
+    \item ({\bf 3 Points}) Recent empirical results suggest that the
+      XML format is very {\em compressible}.  What does it mean if a
+      data storage format is highly compressible?  Why is XML very
+      compressible?  You should support your response to this question
+      with concrete examples and equations.  In particular, you should
+      furnish an equation that shows how to calculate the percent
+      change in the size of an uncompressed and compressed XML file.
+
+    \end{enumerate}
+
+\newpage
+
+\item ({\bf 10 Points}) The eXtensible Markup Language (XML) is a
+  popular data interchange format.  Answer the following questions
+  about XML.
+
+  \begin{enumerate}
+    
+    \item ({\bf 4 Points}) Figure~\ref{figure:xml} furnishes an
+      example of an XML file.  Using parts of this document in your
+      response, please define the following terms.
+
+      \begin{enumerate}
+
+        \item data
+
+        \item meta-data
+
+        \item tag
+
+        \item attribute
+
+      \end{enumerate}
+
+  \item ({\bf 3 Points}) Many authors suggest that XML is a very {\em
+    verbose} data storage format.  Do you agree with this statement?
+    Why or why not? Using the XML file in Figure~\ref{figure:xml}, you
+    should provide evidence to support your response.
+
+  \item ({\bf 3 Points}) In some situations, it may be useful to store
+    an XML document inside of a database.  If you were required to use
+    a relational database, then how would you store an XML document
+    inside of it?  If you could pick any type of database, then how
+    would you store the XML file?
+
+  \end{enumerate}
+
+%% \item ({\bf 10 Points}) The eXtensible Markup Language (XML) can be
+%%   used to store semi-structured data.  Answer the following questions
+%%   about XML.
+
+%%   \begin{enumerate}
+    
+%%     \item ({\bf 3 Points}) XQuery is often described as being the
+%%       ``standard'' query language for XML.  What are the FLWOR
+%%       expressions that you can write in XQuery?
+
+%%     \item ({\bf 2 Points}) Many authors suggest that XML is a very
+%%       {\em verbose} data storage format.  Do you agree with this
+%%       statement?  Why or why not?  You should provide evidence to
+%%       support your response.
+
+%%     \item ({\bf 3 Points}) What is DOM?  What is SAX?  How are these
+%%       two technologies similar to and different from each other?  Your
+%%       response should contain a detailed analysis of the trade-offs 
+%%       associated with using these different APIs.
+
+%%     \item ({\bf 2 Points}) Recent empirical results suggest that the
+%%       XML format is very {\em compressible}.  What does it mean if a
+%%       data storage format is highly compressible?  Why is XML very
+%%       compressible?
+
+%%     \end{enumerate}
+
+\newpage
+
+\item ({\bf 10 Points}) Answer the following questions about database
+  applications and their use during data mining and warehousing.
+
+  \begin{enumerate}
+
+  \item ({\bf 2 Points}) Your text book generally classifies database
+    applications into two distinct categories.  What are these two
+    categories?  Your response to this part of the question should
+    include an example of each type of application.
+
+  %% \item ({\bf 4 Points}) A data warehouse normally uses either a {\em
+  %%   push} or a {\em pull} method for gathering data.  Please define
+  %%   these two strategies for populating the many databases that are
+  %%   normally a part of the warehouse.  Your response to this question
+  %%   should include a detailed diagram of the architecture of a data
+  %%   warehouse.
+
+  \item ({\bf 4 Points}) Many data warehousing applications implement
+    something called {\em OLAP}.  After defining each of the letters
+    in OLAP, please explain how it connects to data warehousing.
+
+  \item ({\bf 4 Points}) Data warehouses often contain large data sets
+    with a mixture of {\em categorical} and {\em numerical}
+    attributes.  As part of your response to this question, please
+    define and give an example of these two types of attributes.
+
+  %% \item ({\bf 2 Points}) The creators of MonetDB claim that a
+  %%   column-oriented database supports effective data compression.
+  %%   What is a column-oriented storage scheme and why does it enable
+  %%   data compression in a warehouse?
+
+\end{enumerate}
+
+\newpage
+
+\item ({\bf 10 Points}) Answer the following questions about the use
+  of machine learning algorithms during the process of data mining and
+  data warehousing.
+
+  \begin{enumerate}
+
+  \item ({\bf 4 Points}) Machine learning algorithms generally focus
+    on {\em prediction} tasks in either a {\em classification} or a
+    {\em regression} framework.  Please define these two terms and
+    give an example of two separate data mining problems that would
+    respectively involve a regression or a classification.
+
+  \item ({\bf 4 Points}) Figure~\ref{figure:tree} gives an example of
+    a regression tree that was constructed by the {\em recursive
+      partitioning} algorithm (the leaves of this tree correspond to
+    values of the ``perf'' attribute).  As part of your response to
+    this question, you should explain how to interpret a tree of this
+    nature and state two or three interesting trends that are exposed
+    by this tree model.  An inspection of the tree reveals that it
+    does not use all of the attributes -- can you suggest why this may
+    be the case?
+
+  \item ({\bf 2 Points}) How would you use the regression tree in
+    Figure~\ref{figure:tree} to perform prediction?  Your response to
+    this question should furnish a concrete example that explains how
+    to predict with the tree that describes CPU performance.
+
+\end{enumerate}
+
+\end{enumerate}
+
+\begin{figure}[p]
+
+\vspace*{-.5in}
+
+\centering
+%\includegraphics{wfg}
+
+{\footnotesize 
+\begin{verbatim}
+<Publications xmlns="http://www.pitt.edu/APS">
+  <Publication>
+    <DocUid>2011-002</DocUid>
+    <Title>CONFLuEnCE: CONtinuous workFLow ExeCution Engine</Title>
+    <Authors>
+        <Author>Panayiotis Neophytou</Author>
+        <Author>Panos K. Chrysanthis</Author>
+        <Author>Alexandros Labrinidis</Author>
+    </Authors>
+    <DatePublished>2011-06</DatePublished>
+    <PublishedIn>SIGMOD 2011</PublishedIn>
+    <PubType>Demonstration</PubType>
+    <Projects>
+        <Project>AQSIOS</Project>
+    </Projects>
+    <SubjectAreas>
+        <SubjectArea>Data Streams</SubjectArea>
+        <SubjectArea>Data Integration</SubjectArea>
+        <SubjectArea>Workflow Management</SubjectArea>
+    </SubjectAreas>
+    <Attachments>
+        <Attachment>
+            <FileName>mod668-neophytou.pdf</FileName>
+            <Size>211655</Size>
+            <Url>http://rodos.cs.pitt.edu:8090/aps/online/download.do?uid=02b15e8229acc195</Url>
+        </Attachment>
+        <Attachment>
+            <FileName>mod668-neophytou.pdf.zip</FileName>
+            <Size>160203</Size>
+            <Url>http://rodos.cs.pitt.edu:8090/aps/online/download.do?uid=02b15e8228406ac0</Url>
+        </Attachment>
+    </Attachments>
+  </Publication>
+ </Publications>
+\end{verbatim} }
+
+\caption{An Example of an eXtensible Markup Language (XML) Document.}
+\label{figure:xml}
+\end{figure}
+
+\begin{figure}[p]
+\centering
+
+\vspace*{-.6in}
+
+\begin{center}
+\includegraphics[totalheight=0.6\textheight]{cputree}
+\end{center}
+
+\vspace*{-.65in}
+
+\caption{A Regression Tree that Models a CPU Performance Data Set.}
+\label{figure:tree}
+\vspace*{-.25in}
+\end{figure}
+
+\begin{figure}[p]
+
+  \centering
+
+  \begin{tabular}{c | c}
+
+    {\bf Variable} & {\bf Meaning} \\ \hline
+
+    syct & cycle time in nanoseconds \\ \hline
+
+    mmin & minimum main memory in kilobytes \\ \hline
+
+    mmax & maximum main memory in kilobytes \\ \hline
+
+    cach & cache size in kilobytes \\ \hline
+
+    chmin & minimum number of channels \\ \hline
+
+    chmax & maximum number of channels \\ \hline
+
+    perf & performance of 209 different CPUs
+
+  \end{tabular}
+
+\end{figure}
+
+\end{document}
+
+
+
