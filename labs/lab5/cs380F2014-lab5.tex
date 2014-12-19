@@ -32,9 +32,10 @@ As you are populating your database with data, please make sure that you take in
 defined for the schema. In addition to running the four {\tt insert} statements that will conform to the integrity
 constraints, you should try to run at least one {\tt insert} that will be rejected by SQLite because of the fact that it
 violates the database's constraints. Please recall from a previous classroom discussion that, depending upon the design
-of your schema,  you may need to configure SQLite to fully enforce the integrity constraints. As you are running all of
-these {\tt insert} and {\tt delete} commands, you should carefully record the ``before'' and ``after'' state of the
-database and comment on why the state changed the way that it did. 
+of your schema,  you may need to configure SQLite to fully enforce the integrity constraints. Now, you should run at
+least one {\tt delete} statement and observe how it changes the state of the database. As you are running all of these
+{\tt insert} and {\tt delete} commands, you should carefully record the ``before'' and ``after'' state of the database
+and comment on why the state changed the way that it did. 
 
 \vspace*{-.05in}
 \section*{Updating Data in a Relational Database}
@@ -55,6 +56,16 @@ relational database.  Whenever possible, these queries should also use various f
 queries on multiple tables, aggregation, and joins. As you are running your queries, you should consider the pseudo-ER
 diagrams that you produced in the previous laboratory assignment to ensure that you understand how tables are connected.
 Please see the course instructor if you cannot run the {\tt select} statements correctly.
+
+\section*{The General Form of SQL Commands}
+
+  After executing a wide variety of SQL commands, you should start to develop a better understand of their general
+  forms. For instance, can you generalize all of the {\tt select} statements that you ran? To learn more about the
+  general form of SQL commands, please visit the ``SQL As Understood by SQLite'' page that is available at:
+  \url{https://www.sqlite.org/lang.html}. As you study this page, you will notice that it contains ``railroad diagrams''
+  that are like flow charts for SQL commands. If these diagrams suggest that one of the data manipulation language
+  statements has a feature that you have not yet tried, please go back to the {\tt sqlite3} interactive shell and try it
+  now.
 
 \section*{Summary of the Required Deliverables}
 
